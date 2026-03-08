@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Compare Eventeny with others</title>
+<link rel="icon" href="https://static.crozdesk.com/web_app_library/providers/logos/000/028/700/box/eventeny-1685117832-logo.png?1685117832" type="image/png" />
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,600;1,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
@@ -11,7 +12,7 @@
 
 <nav id="mainNav">
   <div class="nav-inner">
-    <a href="#" class="nav-logo" style="display:flex;align-items:center;">
+    <a href="https://www.eventeny.com/" class="nav-logo" style="display:flex;align-items:center;">
       <img src="/assets/logos/logo.png" alt="Eventeny logo" style="height:40px;">
     </a>
     <ul class="nav-links">
@@ -53,8 +54,8 @@
             </div>
           </div>
           <div class="dropdown-footer">
-            <a href="#" class="dd-footer-btn dd-footer-ghost">See all events</a>
-            <a href="#" class="dd-footer-btn dd-footer-teal">Create an Event</a>
+            <a href="https://www.eventeny.com/dashboard/events/" class="dd-footer-btn dd-footer-ghost">See all events</a>
+            <a href="https://www.eventeny.com/dashboard/events/?create" class="dd-footer-btn dd-footer-teal">Create an Event</a>
           </div>
         </div>
       </li>
@@ -88,10 +89,10 @@
             </div>
           </div>
           <div class="dropdown-footer dropdown-footer-4col">
-            <a href="#" class="dd-footer-btn dd-footer-ghost">Explore new applications</a>
-            <a href="#" class="dd-footer-btn dd-footer-ghost">Download the mobile app</a>
-            <a href="#" class="dd-footer-btn dd-footer-ghost">Browse help articles</a>
-            <a href="#" class="dd-footer-btn dd-footer-teal">Find your next event</a>
+            <a href="https://www.eventeny.com/events/applications/" class="dd-footer-btn dd-footer-ghost">Explore new applications</a>
+            <a href="https://www.eventeny.com/product/mobile-app/" class="dd-footer-btn dd-footer-ghost">Download the mobile app</a>
+            <a href="https://help.eventeny.com/hc/en-us" class="dd-footer-btn dd-footer-ghost">Browse help articles</a>
+            <a href="https://www.eventeny.com/events/" class="dd-footer-btn dd-footer-teal">Find your next event</a>
           </div>
         </div>
       </li>
@@ -111,13 +112,102 @@
     </div>
   </div>
 </nav>
+<!-- Sticky demo button -->
+<button id="openModal" aria-label="Request a demo">Schedule a demo</button>
+
+<!-- Demo request modal -->
+<div id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modalBox">
+    <button class="closeBtn" id="closeModal" aria-label="Close modal">&times;</button>
+
+    <div class="modal-layout">
+      <!-- Left panel -->
+      <div class="modal-left">
+        <h2 id="modalTitle">Outfox chaos with an easy all-in-one planning tool</h2>
+        <p>Eventeny makes event planning less stressful by making it easy to manage your vendors, volunteers, attendees, sponsors, maps, &amp; more in one place.</p>
+        <ul class="modal-features">
+          <li>Scalable mapping</li>
+          <li>Artist &amp; vendor management</li>
+          <li>Ticketing &amp; registration</li>
+          <li>Mobile app integration</li>
+          <li>Event programming</li>
+        </ul>
+        <p class="modal-free-note">Get started for FREE on the <a href="https://www.eventeny.com/product/pricing/" target="_blank">Eventeny Basic</a> plan.</p>
+      </div>
+
+      <!-- Right panel: form -->
+      <div class="modal-right">
+        <form id="demoForm" novalidate>
+
+          <div class="modal-field">
+            <label for="demoRole">I'm an.... <span class="req">*</span></label>
+            <select id="demoRole" name="role" required>
+              <option value="" disabled selected>Please Select</option>
+              <option value="organizer">Event Organizer</option>
+              <option value="artist">Artist, Vendor, &amp; Exhibitor</option>
+              <option value="attendee">Attendee</option>
+            </select>
+            <span class="field-error" id="demoRoleError">Please complete this required field.</span>
+          </div>
+
+          <div class="modal-field">
+            <label for="demoName">Full name <span class="req">*</span></label>
+            <input type="text" id="demoName" name="name" placeholder="" required>
+            <span class="field-error" id="demoNameError">Please complete this required field.</span>
+          </div>
+
+          <div class="modal-field">
+            <label for="demoEmail">Email <span class="req">*</span></label>
+            <input type="email" id="demoEmail" name="email" placeholder="" required>
+            <span class="field-error" id="demoEmailError">Please complete this required field.</span>
+          </div>
+
+          <div class="modal-field">
+            <label for="demoPhone">Mobile phone number <span class="req">*</span></label>
+            <input type="tel" id="demoPhone" name="phone" placeholder="" required>
+            <span class="field-error" id="demoPhoneError">Please complete this required field.</span>
+          </div>
+
+          <div class="modal-field">
+            <label for="demoUrl">Website URL <span class="req">*</span></label>
+            <input type="url" id="demoUrl" name="url" placeholder="" required>
+            <span class="field-error" id="demoUrlError">Please complete this required field.</span>
+          </div>
+
+          <div class="modal-field">
+            <label for="demoSource">Where did you first learn about us?</label>
+            <select id="demoSource" name="source">
+              <option value="" disabled selected>Please Select</option>
+              <option value="google">Google</option>
+              <option value="facebook">Facebook</option>
+              <option value="instagram">Instagram</option>
+              <option value="tiktok">TikTok</option>
+              <option value="friend">Friend or peer</option>
+              <option value="ai">ChatGPT or AI</option>
+              <option value="tv">TV</option>
+              <option value="blog">Eventeny blog</option>
+              <option value="podcast">Podcast or YouTube</option>
+              <option value="tradeshow">Trade Show or Expo</option>
+              <option value="attended">Attended an event on Eventeny</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <button type="submit" class="modal-submit">Request demo</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
 <!-- HERO -->
 <div class="hero">
   <div class="container">
 
     <div class="hero-left">
-      <div class="hero-badge"><span class="badge-dot"></span>Everything Your Event Needs. One Platform.</div>
+      <div class="hero-badge"><span class="badge-dot"></span>Outfox the chaos of Event management</div>
       <h1>Look and Compare.<br> <em>Eventeny Is There.</em></h1>
       <p class="hero-sub">10,000+ event organizers switched to Eventeny for modern, streamlined workflows built specifically for festivals and conventions.</p>
       <div class="hero-actions">
@@ -392,7 +482,6 @@
                 <div class="feat-item" data-cat="support"><div class="feat-ico yes"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Phone and email support</span></div>
                 <div class="feat-item" data-cat="support"><div class="feat-ico yes"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>In-house development team</span></div>
               </div>
-              <button class="feat-show-more-btn" id="ebEvShowMore" onclick="toggleFeatRows('ebEvRows','ebEvShowMore')">Show more</button>
             </div>
 
             <!-- RIGHT: Eventbrite column -->
@@ -422,10 +511,12 @@
                 <div class="feat-item" data-cat="support"><div class="feat-ico part">~</div><span>Phone and email support <span class="pill pill-amber" style="font-size:10px;">Email only</span></span></div>
                 <div class="feat-item" data-cat="support"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>In-house development team</span></div>
               </div>
-              <button class="feat-show-more-btn comp-show-more" id="ebCompShowMore" onclick="toggleFeatRows('ebCompRows','ebCompShowMore')">Show more</button>
             </div>
 
           </div><!-- /feat-layout -->
+          <div class="feat-show-more-wrap">
+            <button class="feat-show-more-btn" id="ebShowMore" onclick="toggleFeatRows('ebEvRows', 'ebCompRows', 'ebShowMore')">Show more</button>
+          </div>
         </div>
         <div class="quote-strip"><div class="q-mark">"</div><div><blockquote>We switched from Eventbrite after our first year. The vendor management alone saved us 20+ hours per event. Nothing compares for multi-track festivals.</blockquote><cite>Sarah M., Festival Director — Atlanta Arts Weekend</cite></div></div>
         </div>
@@ -473,7 +564,6 @@
                 <div class="feat-item" data-cat="support"><div class="feat-ico yes">✓</div><span>Phone and email support</span></div>
                 <div class="feat-item" data-cat="support"><div class="feat-ico yes">✓</div><span>In-house development team</span></div>
               </div>
-              <button class="feat-show-more-btn" id="cventEvShowMore" onclick="toggleFeatRows('cventEvRows','cventEvShowMore')">Show more</button>
             </div>
             <div class="feat-col-comp">
               <div class="feat-col-header comp-header">CVENT</div>
@@ -496,8 +586,10 @@
                 <div class="feat-item" data-cat="support"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Phone and email support</span></div>
                 <div class="feat-item" data-cat="support"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>In-house development team</span></div>
               </div>
-              <button class="feat-show-more-btn comp-show-more" id="cventCompShowMore" onclick="toggleFeatRows('cventCompRows','cventCompShowMore')">Show more</button>
             </div>
+          </div>
+          <div class="feat-show-more-wrap">
+            <button class="feat-show-more-btn" id="cventShowMore" onclick="toggleFeatRows('cventEvRows', 'cventCompRows', 'cventShowMore')">Show more</button>
           </div>
         </div>
         <div class="quote-strip"><div class="q-mark">"</div><div><blockquote>Cvent was built for corporate conferences. We run a community festival with 300 vendors. Eventeny was the only platform that understood what we needed.</blockquote><cite>James T., Operations Lead — River City Food Festival</cite></div></div>
@@ -543,7 +635,6 @@
                 <div class="feat-item" data-cat="support"><div class="feat-ico yes">✓</div><span>Phone and email support</span></div>
                 <div class="feat-item" data-cat="support"><div class="feat-ico yes">✓</div><span>Sponsor management</span></div>
               </div>
-              <button class="feat-show-more-btn" id="leapEvShowMore" onclick="toggleFeatRows('leapEvRows','leapEvShowMore')">Show more</button>
             </div>
             <div class="feat-col-comp">
               <div class="feat-col-header comp-header">LEAP CONVENTIONS</div>
@@ -564,8 +655,10 @@
                 <div class="feat-item" data-cat="support"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Phone and email support</span></div>
                 <div class="feat-item" data-cat="support"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Sponsor management</span></div>
               </div>
-              <button class="feat-show-more-btn comp-show-more" id="leapCompShowMore" onclick="toggleFeatRows('leapCompRows','leapCompShowMore')">Show more</button>
             </div>
+          </div>
+          <div class="feat-show-more-wrap">
+            <button class="feat-show-more-btn" id="leapShowMore" onclick="toggleFeatRows('leapEvRows', 'leapCompRows', 'leapShowMore')">Show more</button>
           </div>
         </div>
         <div class="quote-strip"><div class="q-mark">"</div><div><blockquote>Leap handled our badge sales fine. But when we needed vendors, volunteers, and floor maps in the same system, Eventeny was the only real option.</blockquote><cite>Marcus D., Convention Director — TechCon Midwest</cite></div></div>
@@ -611,7 +704,6 @@
                 <div class="feat-item" data-cat="support"><div class="feat-ico yes">✓</div><span>Phone and email support</span></div>
                 <div class="feat-item" data-cat="support"><div class="feat-ico yes">✓</div><span>In-house development team</span></div>
               </div>
-              <button class="feat-show-more-btn" id="zappEvShowMore" onclick="toggleFeatRows('zappEvRows','zappEvShowMore')">Show more</button>
             </div>
             <div class="feat-col-comp">
               <div class="feat-col-header comp-header">ZAPPLICATION</div>
@@ -632,8 +724,10 @@
                 <div class="feat-item" data-cat="support"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Phone and email support</span></div>
                 <div class="feat-item" data-cat="support"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>In-house development team</span></div>
               </div>
-              <button class="feat-show-more-btn comp-show-more" id="zappCompShowMore" onclick="toggleFeatRows('zappCompRows','zappCompShowMore')">Show more</button>
             </div>
+          </div>
+          <div class="feat-show-more-wrap">
+            <button class="feat-show-more-btn" id="zappShowMore" onclick="toggleFeatRows('zappEvRows', 'zappCompRows', 'zappShowMore')">Show more</button>
           </div>
         </div>
         <div class="quote-strip"><div class="q-mark">"</div><div><blockquote>We paid Zapplication $2,700 a year just for applications, then stitched together three other tools for everything else. Eventeny replaced all of them.</blockquote><cite>Lisa K., Director — Midwest Art Fair</cite></div></div>
@@ -680,7 +774,6 @@
                 <div class="feat-item" data-cat="support"><div class="feat-ico yes">✓</div><span>Phone and email support</span></div>
                 <div class="feat-item" data-cat="support"><div class="feat-ico yes">✓</div><span>Sponsor management</span></div>
               </div>
-              <button class="feat-show-more-btn" id="boothEvShowMore" onclick="toggleFeatRows('boothEvRows','boothEvShowMore')">Show more</button>
             </div>
             <div class="feat-col-comp">
               <div class="feat-col-header comp-header">BOOTHCENTRAL</div>
@@ -701,8 +794,10 @@
                 <div class="feat-item" data-cat="support"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Phone and email support</span></div>
                 <div class="feat-item" data-cat="support"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Sponsor management</span></div>
               </div>
-              <button class="feat-show-more-btn comp-show-more" id="boothCompShowMore" onclick="toggleFeatRows('boothCompRows','boothCompShowMore')">Show more</button>
             </div>
+          </div>
+          <div class="feat-show-more-wrap">
+            <button class="feat-show-more-btn" id="boothShowMore" onclick="toggleFeatRows('boothEvRows', 'boothCompRows', 'boothShowMore')">Show more</button>
           </div>
         </div>
         </div>
@@ -746,7 +841,6 @@
                 <div class="feat-item" data-cat="support"><div class="feat-ico yes">✓</div><span>Phone and email support</span></div>
                 <div class="feat-item" data-cat="support"><div class="feat-ico yes">✓</div><span>In-house development team</span></div>
               </div>
-              <button class="feat-show-more-btn" id="tsEvShowMore" onclick="toggleFeatRows('tsEvRows','tsEvShowMore')">Show more</button>
             </div>
             <div class="feat-col-comp">
               <div class="feat-col-header comp-header">TICKETSPICE</div>
@@ -766,8 +860,10 @@
                 <div class="feat-item" data-cat="support"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Phone and email support</span></div>
                 <div class="feat-item" data-cat="support"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>In-house development team</span></div>
               </div>
-              <button class="feat-show-more-btn comp-show-more" id="tsCompShowMore" onclick="toggleFeatRows('tsCompRows','tsCompShowMore')">Show more</button>
             </div>
+          </div>
+          <div class="feat-show-more-wrap">
+            <button class="feat-show-more-btn" id="tsShowMore" onclick="toggleFeatRows('tsEvRows', 'tsCompRows', 'tsShowMore')">Show more</button>
           </div>
         </div>
         </div>
@@ -811,7 +907,6 @@
                 <div class="feat-item" data-cat="support"><div class="feat-ico yes">✓</div><span>Phone and email support</span></div>
                 <div class="feat-item" data-cat="support"><div class="feat-ico yes">✓</div><span>In-house development team</span></div>
               </div>
-              <button class="feat-show-more-btn" id="tixrEvShowMore" onclick="toggleFeatRows('tixrEvRows','tixrEvShowMore')">Show more</button>
             </div>
             <div class="feat-col-comp">
               <div class="feat-col-header comp-header">TIXR</div>
@@ -831,8 +926,10 @@
                 <div class="feat-item" data-cat="support"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Phone and email support</span></div>
                 <div class="feat-item" data-cat="support"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>In-house development team</span></div>
               </div>
-              <button class="feat-show-more-btn comp-show-more" id="tixrCompShowMore" onclick="toggleFeatRows('tixrCompRows','tixrCompShowMore')">Show more</button>
             </div>
+          </div>
+          <div class="feat-show-more-wrap">
+            <button class="feat-show-more-btn" id="tixrShowMore" onclick="toggleFeatRows('tixrEvRows', 'tixrCompRows', 'tixrShowMore')">Show more</button>
           </div>
         </div>
         </div>
@@ -880,7 +977,6 @@
                 <div class="feat-item" data-cat="support"><div class="feat-ico yes">✓</div><span>Phone and email support</span></div>
                 <div class="feat-item" data-cat="support"><div class="feat-ico yes">✓</div><span>In-house development team</span></div>
               </div>
-              <button class="feat-show-more-btn" id="oneplanEvShowMore" onclick="toggleFeatRows('oneplanEvRows','oneplanEvShowMore')">Show more</button>
             </div>
             <div class="feat-col-comp">
               <div class="feat-col-header comp-header">ONEPLAN</div>
@@ -901,8 +997,10 @@
                 <div class="feat-item" data-cat="support"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Phone and email support</span></div>
                 <div class="feat-item" data-cat="support"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>In-house development team</span></div>
               </div>
-              <button class="feat-show-more-btn comp-show-more" id="oneplanCompShowMore" onclick="toggleFeatRows('oneplanCompRows','oneplanCompShowMore')">Show more</button>
             </div>
+          </div>
+          <div class="feat-show-more-wrap">
+            <button class="feat-show-more-btn" id="oneplanShowMore" onclick="toggleFeatRows('oneplanEvRows', 'oneplanCompRows', 'oneplanShowMore')">Show more</button>
           </div>
         </div>
         <div class="quote-strip"><div class="q-mark">"</div><div><blockquote>OnePlan helped us design the site layout, but we still needed three other tools to run the actual event. Eventeny does it all in one place.</blockquote><cite>Rachel M., Event Director — Lakefront Summer Fest</cite></div></div>
@@ -949,7 +1047,6 @@
                 <div class="feat-item" data-cat="support"><div class="feat-ico yes">✓</div><span>Phone and email support</span></div>
                 <div class="feat-item" data-cat="support"><div class="feat-ico yes">✓</div><span>In-house development team</span></div>
               </div>
-              <button class="feat-show-more-btn" id="expofpEvShowMore" onclick="toggleFeatRows('expofpEvRows','expofpEvShowMore')">Show more</button>
             </div>
             <div class="feat-col-comp">
               <div class="feat-col-header comp-header">EXPOFP</div>
@@ -970,8 +1067,10 @@
                 <div class="feat-item" data-cat="support"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Phone and email support</span></div>
                 <div class="feat-item" data-cat="support"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>In-house development team</span></div>
               </div>
-              <button class="feat-show-more-btn comp-show-more" id="expofpCompShowMore" onclick="toggleFeatRows('expofpCompRows','expofpCompShowMore')">Show more</button>
             </div>
+          </div>
+          <div class="feat-show-more-wrap">
+            <button class="feat-show-more-btn" id="expofpShowMore" onclick="toggleFeatRows('expofpEvRows', 'expofpCompRows', 'expofpShowMore')">Show more</button>
           </div>
         </div>
         <div class="quote-strip"><div class="q-mark">"</div><div><blockquote>ExpoFP gave us a great floor map but we still needed separate tools for applications, ticketing, and volunteers. Eventeny replaced the whole stack.</blockquote><cite>Dana P., Show Manager — Tri-State Craft Expo</cite></div></div>
@@ -1016,7 +1115,6 @@
                 <div class="feat-item" data-cat="support"><div class="feat-ico yes">✓</div><span>Phone and email support</span></div>
                 <div class="feat-item" data-cat="support"><div class="feat-ico yes">✓</div><span>In-house development team</span></div>
               </div>
-              <button class="feat-show-more-btn" id="mmmEvShowMore" onclick="toggleFeatRows('mmmEvRows','mmmEvShowMore')">Show more</button>
             </div>
             <div class="feat-col-comp">
               <div class="feat-col-header comp-header">MANAGE MY MARKET</div>
@@ -1036,8 +1134,10 @@
                 <div class="feat-item" data-cat="support"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Phone and email support</span></div>
                 <div class="feat-item" data-cat="support"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>In-house development team</span></div>
               </div>
-              <button class="feat-show-more-btn comp-show-more" id="mmmCompShowMore" onclick="toggleFeatRows('mmmCompRows','mmmCompShowMore')">Show more</button>
             </div>
+          </div>
+          <div class="feat-show-more-wrap">
+            <button class="feat-show-more-btn" id="mmmShowMore" onclick="toggleFeatRows('mmmEvRows', 'mmmCompRows', 'mmmShowMore')">Show more</button>
           </div>
         </div>
         <div class="quote-strip"><div class="q-mark">"</div><div><blockquote>Manage My Market handled our vendor sign-ups but when we wanted ticketing and maps, we had to switch. With Eventeny we run the whole market from one dashboard.</blockquote><cite>Tara J., Market Manager — Riverside Weekend Market</cite></div></div>
@@ -1084,7 +1184,6 @@
                 <div class="feat-item" data-cat="support"><div class="feat-ico yes">✓</div><span>Phone and email support</span></div>
                 <div class="feat-item" data-cat="support"><div class="feat-ico yes">✓</div><span>In-house development team</span></div>
               </div>
-              <button class="feat-show-more-btn" id="jotformEvShowMore" onclick="toggleFeatRows('jotformEvRows','jotformEvShowMore')">Show more</button>
             </div>
             <div class="feat-col-comp">
               <div class="feat-col-header comp-header">JOTFORM</div>
@@ -1105,8 +1204,10 @@
                 <div class="feat-item" data-cat="support"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Phone and email support</span></div>
                 <div class="feat-item" data-cat="support"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>In-house development team</span></div>
               </div>
-              <button class="feat-show-more-btn comp-show-more" id="jotformCompShowMore" onclick="toggleFeatRows('jotformCompRows','jotformCompShowMore')">Show more</button>
             </div>
+          </div>
+          <div class="feat-show-more-wrap">
+            <button class="feat-show-more-btn" id="jotformShowMore" onclick="toggleFeatRows('jotformEvRows', 'jotformCompRows', 'jotformShowMore')">Show more</button>
           </div>
         </div>
         <div class="quote-strip"><div class="q-mark">"</div><div><blockquote>We started with Jotform for vendor sign-ups. It worked until we needed payment collection, booth tracking, and ticket sales — then we found Eventeny.</blockquote><cite>Chris W., Festival Coordinator — Blue Ridge Folk Festival</cite></div></div>
@@ -1153,7 +1254,6 @@
                 <div class="feat-item" data-cat="support"><div class="feat-ico yes">✓</div><span>Phone and email support</span></div>
                 <div class="feat-item" data-cat="support"><div class="feat-ico yes">✓</div><span>In-house development team</span></div>
               </div>
-              <button class="feat-show-more-btn" id="gformsEvShowMore" onclick="toggleFeatRows('gformsEvRows','gformsEvShowMore')">Show more</button>
             </div>
             <div class="feat-col-comp">
               <div class="feat-col-header comp-header">GOOGLE FORMS</div>
@@ -1174,8 +1274,10 @@
                 <div class="feat-item" data-cat="support"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Phone and email support</span></div>
                 <div class="feat-item" data-cat="support"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>In-house development team</span></div>
               </div>
-              <button class="feat-show-more-btn comp-show-more" id="gformsCompShowMore" onclick="toggleFeatRows('gformsCompRows','gformsCompShowMore')">Show more</button>
             </div>
+          </div>
+          <div class="feat-show-more-wrap">
+            <button class="feat-show-more-btn" id="gformsShowMore" onclick="toggleFeatRows('gformsEvRows', 'gformsCompRows', 'gformsShowMore')">Show more</button>
           </div>
         </div>
         <div class="quote-strip"><div class="q-mark">"</div><div><blockquote>Google Forms got us through year one. By year two we had 200 vendors, a volunteer team, and a ticketing operation. Eventeny was built for exactly that.</blockquote><cite>Amy S., Event Lead — Oakdale Community Arts Fair</cite></div></div>
@@ -1220,7 +1322,6 @@
                 <div class="feat-item" data-cat="support"><div class="feat-ico yes">✓</div><span>Phone and email support</span></div>
                 <div class="feat-item" data-cat="support"><div class="feat-ico yes">✓</div><span>In-house development team</span></div>
               </div>
-              <button class="feat-show-more-btn" id="regfoxEvShowMore" onclick="toggleFeatRows('regfoxEvRows','regfoxEvShowMore')">Show more</button>
             </div>
             <div class="feat-col-comp">
               <div class="feat-col-header comp-header">REGFOX</div>
@@ -1240,8 +1341,10 @@
                 <div class="feat-item" data-cat="support"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Phone and email support</span></div>
                 <div class="feat-item" data-cat="support"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>In-house development team</span></div>
               </div>
-              <button class="feat-show-more-btn comp-show-more" id="regfoxCompShowMore" onclick="toggleFeatRows('regfoxCompRows','regfoxCompShowMore')">Show more</button>
             </div>
+          </div>
+          <div class="feat-show-more-wrap">
+            <button class="feat-show-more-btn" id="regfoxShowMore" onclick="toggleFeatRows('regfoxEvRows', 'regfoxCompRows', 'regfoxShowMore')">Show more</button>
           </div>
         </div>
         <div class="quote-strip"><div class="q-mark">"</div><div><blockquote>RegFox was easy for ticket sales. But we needed vendor applications, floor maps, and volunteer scheduling too. Eventeny handled all of it.</blockquote><cite>Kevin B., Operations Lead — Suncoast Community Festival</cite></div></div>
@@ -1294,8 +1397,7 @@
     <h2 class="reveal">Ready to run a <span>better event?</span></h2>
     <p class="reveal">Join thousands of event organizers who trust Eventeny</p>
     <div class="cta-btns reveal">
-      <a href="#" class="btn-cta">Start Your Free Trial</a>
-      <a href="#" class="btn-cta-ghost">Book a Demo</a>
+      <a href="https://www.eventeny.com/product/pricing/" class="btn-cta">Start Your Free Trial</a>
     </div>
     <div class="cta-fine reveal">No credit card &nbsp;·&nbsp; Free setup &nbsp;·&nbsp; Cancel anytime</div>
   </div>
@@ -1306,8 +1408,8 @@
   <div class="foot-inner">
     <div class="foot-logo">Eventeny</div>
     <div class="foot-links">
-      <a href="#">Product</a><a href="#">Pricing</a><a href="#">Compare</a>
-      <a href="#">Resources</a><a href="#">Privacy</a><a href="#">Terms</a>
+      <a href="https://www.eventeny.com/why-eventeny/">Product</a><a href="https://www.eventeny.com/product/pricing/">Pricing</a><a href="https://www.eventeny.com/compare/">Compare</a>
+      <a href="https://www.eventeny.com/event-management-resources/">Resources</a><a href="https://www.eventeny.com/legal/privacy/">Privacy</a><a href="https://www.eventeny.com/legal/terms-of-service/">Terms</a>
     </div>
     <div class="foot-copy">© 2026 Eventeny</div>
   </div>

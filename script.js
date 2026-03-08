@@ -3,27 +3,94 @@
    Dependencies: jQuery 3.7.1
    ================================================================ */
 
-/* Global: show more / show less for feat-rows-wrap */
-function toggleFeatRows(rowsId, btnId) {
-  var wrap = document.getElementById(rowsId);
-  var btn  = document.getElementById(btnId);
-  if (!wrap || !btn) return;
-  var expanded = wrap.classList.toggle('expanded');
+/* Global: show more / show less — single centered button controls both columns */
+function toggleFeatRows(evRowsId, compRowsId, btnId) {
+  var evWrap   = document.getElementById(evRowsId);
+  var compWrap = document.getElementById(compRowsId);
+  var btn      = document.getElementById(btnId);
+  if (!evWrap || !compWrap || !btn) return;
+  var expanded = btn.textContent.trim() === 'Show more';
+  evWrap.classList.toggle('expanded', expanded);
+  compWrap.classList.toggle('expanded', expanded);
   btn.textContent = expanded ? 'Show less' : 'Show more';
-  /* sync the sibling column's rows wrap and button */
-  var $panel = $(wrap).closest('.comp-panel');
-  $panel.find('.feat-rows-wrap').each(function () {
-    if (this.id !== rowsId) {
-      if (expanded) this.classList.add('expanded');
-      else          this.classList.remove('expanded');
-    }
-  });
-  $panel.find('.feat-show-more-btn').each(function () {
-    if (this.id !== btnId) {
-      this.textContent = expanded ? 'Show less' : 'Show more';
-    }
-  });
 }
+
+// ── Demo modal logic ──
+(function () {
+  var overlay    = document.getElementById('modalOverlay');
+  var openBtn    = document.getElementById('openModal');
+  var closeBtn   = document.getElementById('closeModal');
+  var form       = document.getElementById('demoForm');
+
+  function openModal() {
+    overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    closeBtn.focus();
+  }
+  function closeModal() {
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  openBtn.addEventListener('click', openModal);
+  closeBtn.addEventListener('click', closeModal);
+
+  // Close on overlay click
+  overlay.addEventListener('click', function (e) {
+    if (e.target === overlay) closeModal();
+  });
+
+  // Close on Escape key
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && overlay.classList.contains('open')) closeModal();
+  });
+
+  // Also wire up "Book a Demo" CTA if present
+  document.querySelectorAll('[data-open-demo]').forEach(function (el) {
+    el.addEventListener('click', function (e) { e.preventDefault(); openModal(); });
+  });
+
+  // Form validation
+  var requiredFields = [
+    { id: 'demoRole',  errId: 'demoRoleError' },
+    { id: 'demoName',  errId: 'demoNameError' },
+    { id: 'demoEmail', errId: 'demoEmailError' },
+    { id: 'demoPhone', errId: 'demoPhoneError' },
+    { id: 'demoUrl',   errId: 'demoUrlError' },
+  ];
+
+  function validateField(fieldId, errId) {
+    var el  = document.getElementById(fieldId);
+    var err = document.getElementById(errId);
+    var ok  = el.value.trim() !== '';
+    el.classList.toggle('invalid', !ok);
+    err.classList.toggle('visible', !ok);
+    return ok;
+  }
+
+  // Live clear on input
+  requiredFields.forEach(function (f) {
+    var el = document.getElementById(f.id);
+    el.addEventListener('input', function () {
+      validateField(f.id, f.errId);
+    });
+  });
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var allValid = requiredFields.every(function (f) {
+      return validateField(f.id, f.errId);
+    });
+    if (!allValid) return;
+    // Success — replace form with confirmation
+    form.innerHTML = '<div style="text-align:center;padding:40px 0;">'
+      + '<div style="font-size:40px;margin-bottom:16px;">🎉</div>'
+      + '<p style="font-family:Poppins,sans-serif;font-size:18px;font-weight:600;color:#0a2a28;margin:0 0 8px;">Request received!</p>'
+      + '<p style="font-size:14px;color:#5a7a76;">Our team will reach out within one business day.</p>'
+      + '</div>';
+  });
+}());
+
 
 
    $(function () {
@@ -125,79 +192,79 @@ function toggleFeatRows(rowsId, btnId) {
       text: '<strong>Eventbrite</strong> focuses on ticketing and event promotion. <strong>Eventeny</strong> manages the full event includig vendors, maps, volunteers, sponsors, and ticketing in one place.',
       badge: 'Eventeny wins 9 of 11 features',
       href: 'https://www.eventeny.com/compare/eventeny-vs-eventbrite/',
-      label: 'View Comparison -->'
+      label: 'View Comparison'
     },
     cvent: {
       text: '<strong>Cvent</strong> is built for enterprise conferences and corporate teams. <strong>Eventeny</strong> is built for festivals, conventions, and live event operations.',
       badge: 'Eventeny wins 6 of 6 features',
       href: 'https://www.eventeny.com/compare/eventeny-vs-cvent/',
-      label: 'View Comparison -->'
+      label: 'View Comparison'
     },
     leap: {
       text: '<strong>Leap Conventions</strong> handles badge sales and fan event coordination. <strong>Eventeny</strong> adds vendor management, interactive mapping, sponsors, and volunteers on top.',
       badge: 'Eventeny wins 5 of 6 features',
       href: 'https://www.eventeny.com/compare/eventeny-vs-leap-conventions/',
-      label: 'View Comparison -->'
+      label: 'View Comparison'
     },
     zapplication: {
       text: '<strong>Zapplication</strong> centers on jury-based artist applications. <strong>Eventeny</strong> covers applications, mapping, volunteers, sponsors, and more — no extra tools required.',
       badge: 'Eventeny wins 6 of 6 features',
       href: 'https://www.eventeny.com/compare/eventeny-vs-zapplication/',
-      label: 'View Comparison -->'
+      label: 'View Comparison'
     },
     boothcentral: {
       text: '<strong>BoothCentral</strong> specializes in booth applications and floor plans. <strong>Eventeny</strong> brings ticketing, volunteers, sponsor management, and full event logistics alongside that.',
       badge: 'Eventeny wins 5 of 6 features',
       href: 'https://www.eventeny.com/compare/eventeny-vs-boothcentral/',
-      label: 'View Comparison -->'
+      label: 'View Comparison'
     },
     ticketspice: {
       text: '<strong>TicketSpice</strong> specializes in customizable ticket sales. <strong>Eventeny</strong> includes ticketing plus the full event stack — vendors, mapping, volunteers, and sponsors.',
       badge: 'Eventeny wins 4 of 6 features',
       href: 'https://www.eventeny.com/compare/eventeny-vs-ticketspice/',
-      label: 'View Comparison -->'
+      label: 'View Comparison'
     },
     tixr: {
       text: '<strong>Tixr</strong> focuses on premium branded ticketing for live entertainment. <strong>Eventeny</strong> fits festivals, conventions, and markets where you need more than a ticket scanner.',
       badge: 'Eventeny wins 4 of 6 features',
       href: 'https://www.eventeny.com/compare/eventeny-vs-tixr/',
-      label: 'View Comparison -->'
+      label: 'View Comparison'
     },
     oneplan: {
       text: '<strong>OnePlan</strong> excels at event site design and safety mapping. <strong>Eventeny</strong> adds vendor management, ticketing, volunteers, and scheduling alongside interactive floor plans.',
       badge: 'Eventeny wins 5 of 6 features',
       href: 'https://www.eventeny.com/eventeny-vs-oneplan/',
-      label: 'View Comparison -->'
+      label: 'View Comparison'
     },
     expofp: {
       text: '<strong>ExpoFP</strong> specializes in interactive floor plans for expos. <strong>Eventeny</strong> delivers the same floor plan tools plus applications, ticketing, volunteers, and full event management.',
       badge: 'Eventeny wins 5 of 6 features',
       href: 'https://www.eventeny.com/eventeny-vs-expofp/',
-      label: 'View Comparison -->'
+      label: 'View Comparison'
     },
     managemymarket: {
       text: '<strong>Manage My Market</strong> handles vendor sign-ups for markets. <strong>Eventeny</strong> covers applications, event mapping, ticketing, and volunteers — with no fees that reset each year.',
       badge: 'Eventeny wins 5 of 6 features',
       href: 'https://www.eventeny.com/compare/eventeny-vs-manage-my-market/',
-      label: 'View Comparison -->'
+      label: 'View Comparison'
     },
     jotform: {
       text: '<strong>Jotform</strong> is a general form builder. <strong>Eventeny</strong> is purpose-built for events — with vendor management, ticketing, interactive maps, and volunteer tools out of the box.',
       badge: 'Eventeny wins 6 of 6 features',
       href: 'https://www.eventeny.com/form-building/',
-      label: 'View Comparison -->'
+      label: 'View Comparison'
     },
     googleforms: {
       text: '<strong>Google Forms</strong> collects data. <strong>Eventeny</strong> runs events — with applications, payments, ticket sales, volunteer scheduling, and interactive site maps all in one platform.',
       badge: 'Eventeny wins 6 of 6 features',
       href: 'https://www.eventeny.com/form-building/',
-      label: 'View Comparison -->'
+      label: 'View Comparison'
     },
     regfox: {
       text: '<strong>RegFox</strong> builds flexible registration forms and ticket sales. <strong>Eventeny</strong> adds vendor and artist management, interactive mapping, volunteers, and dedicated event support.',
       badge: 'Eventeny wins 5 of 6 features',
       href: 'https://www.eventeny.com/form-building/',
-      label: 'View Comparison -->'
+      label: 'View Comparison'
     }
   };
 
