@@ -778,7 +778,7 @@
      font-size: 13px;
      font-weight: 700;
    }
-   .feat-ico.yes { background: #1b4b1c; }
+   .feat-ico.yes { background: #1b4b1c; color: #fff; }
    .feat-ico.no  { background: #fee2e2; border: 2px solid #fca5a5; }
    .feat-ico.part { background: var(--ev-amber-light); border: 1.5px solid #fcd34d; color: var(--ev-amber); font-size: 14px; }
    /* ── Single centered show more / show less button ── */
