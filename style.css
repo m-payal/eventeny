@@ -571,7 +571,7 @@
    .t-head { display: grid; grid-template-columns: 1fr 188px 188px; background: var(--ev-bg-section); border-bottom: 1px solid var(--ev-border); position: sticky; top: 72px; z-index: 10; box-shadow: 0 2px 8px rgba(0,100,80,0.08); }
    .t-h { padding: 13px 20px; font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--ev-body); }
    .t-h.ev { background: var(--ev-teal-light); color: var(--ev-teal-dark); border-left: 3px solid var(--ev-teal); display: flex; align-items: center; gap: 8px; }
-   .rec-chip { background: var(--ev-teal-deeper); color: white; font-size: 9px; font-weight: 700; padding: 2px 8px; border-radius: 4px; letter-spacing: .04em; }
+   .rec-chip { background: var(--ev-teal-deeper); color: white; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 4px; letter-spacing: .04em; }
    .t-sec { display: grid; grid-template-columns: 1fr 188px 188px; background: var(--ev-bg-soft); border-top: 1px solid var(--ev-border); padding: 10px 20px; }
    .t-sec-label { font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--ev-muted); grid-column: 1 / -1; }
    .t-row { display: grid; grid-template-columns: 1fr 188px 188px; border-top: 1px solid var(--ev-border); align-items: center; transition: background .15s; }
