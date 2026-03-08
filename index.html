@@ -137,46 +137,55 @@
 
       <!-- Right panel: form -->
       <div class="modal-right">
-        <form id="demoForm" novalidate>
+        <form id="demoForm" novalidate autocomplete="on">
 
           <div class="modal-field">
-            <label for="demoRole">I'm an.... <span class="req">*</span></label>
-            <select id="demoRole" name="role" required>
-              <option value="" disabled selected>Please Select</option>
+            <label for="demoRole">I'm an event... <span class="req">*</span></label>
+            <select id="demoRole" name="role" required autocomplete="organization-title">
+              <option value="" disabled selected>Select your role</option>
               <option value="organizer">Event Organizer</option>
               <option value="artist">Artist, Vendor, &amp; Exhibitor</option>
               <option value="attendee">Attendee</option>
             </select>
+            <span class="field-valid-ico" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="#22c55e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             <span class="field-error" id="demoRoleError">Please complete this required field.</span>
           </div>
 
           <div class="modal-field">
             <label for="demoName">Full name <span class="req">*</span></label>
-            <input type="text" id="demoName" name="name" placeholder="" required>
-            <span class="field-error" id="demoNameError">Please complete this required field.</span>
+            <input type="text" id="demoName" name="name" placeholder="Jane Smith" required
+              autocomplete="name" autocapitalize="words" autocorrect="off" spellcheck="false" inputmode="text">
+            <span class="field-valid-ico" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="#22c55e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="field-error" id="demoNameError">Please enter your full name.</span>
           </div>
 
           <div class="modal-field">
             <label for="demoEmail">Email <span class="req">*</span></label>
-            <input type="email" id="demoEmail" name="email" placeholder="" required>
-            <span class="field-error" id="demoEmailError">Please complete this required field.</span>
+            <input type="email" id="demoEmail" name="email" placeholder="you@company.com" required
+              autocomplete="email" autocapitalize="none" autocorrect="off" spellcheck="false" inputmode="email">
+            <span class="field-valid-ico" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="#22c55e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="field-error" id="demoEmailError">Enter a valid email address.</span>
           </div>
 
           <div class="modal-field">
             <label for="demoPhone">Mobile phone number <span class="req">*</span></label>
-            <input type="tel" id="demoPhone" name="phone" placeholder="" required>
-            <span class="field-error" id="demoPhoneError">Please complete this required field.</span>
+            <input type="tel" id="demoPhone" name="phone" placeholder="(555) 000-0000" required
+              autocomplete="tel" autocapitalize="none" autocorrect="off" inputmode="tel">
+            <span class="field-valid-ico" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="#22c55e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="field-error" id="demoPhoneError">Enter a valid phone number.</span>
           </div>
 
           <div class="modal-field">
             <label for="demoUrl">Website URL <span class="req">*</span></label>
-            <input type="url" id="demoUrl" name="url" placeholder="" required>
-            <span class="field-error" id="demoUrlError">Please complete this required field.</span>
+            <input type="url" id="demoUrl" name="url" placeholder="https://yoursite.com" required
+              autocomplete="url" autocapitalize="none" autocorrect="off" spellcheck="false" inputmode="url">
+            <span class="field-valid-ico" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="#22c55e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="field-error" id="demoUrlError">Enter a valid URL (include https://).</span>
           </div>
 
           <div class="modal-field">
             <label for="demoSource">Where did you first learn about us?</label>
-            <select id="demoSource" name="source">
+            <select id="demoSource" name="source" autocomplete="off">
               <option value="" disabled selected>Please Select</option>
               <option value="google">Google</option>
               <option value="facebook">Facebook</option>
@@ -427,12 +436,11 @@
         <div class="table-card-wrap">
         <div class="score-banner">
           <div class="score-text"><span class="score-badge">Eventeny wins 9 of 11 features</span> vs Eventbrite</div>
-          <a href="https://www.eventeny.com/product/pricing/" class="score-cta">Start Free</a>
         </div>
         <div class="table-card">
           <!-- Pricing row -->
           <div class="pricing-row">
-            <div class="price-block ev"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="Eventeny" class="price-logo"><div class="price-amount">$240<span style="font-size:15px;font-weight:400;opacity:.7">/mo</span></div><div class="price-note">All features included, no hidden fees</div><div class="price-details"><span class="price-detail"><span class="dl">Setup:</span> Free</span><span class="price-detail"><span class="dl">Transaction:</span> 3%</span><span class="price-detail"><span class="dl">Vendor tools:</span> Included</span></div><a href="https://www.eventeny.com/product/pricing/" class="price-block-cta">Start Free</a></div>
+            <div class="price-block ev"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="Eventeny" class="price-logo"><div class="price-amount">$240<span style="font-size:15px;font-weight:400;opacity:.7">/mo</span></div><div class="price-note">All features included, no hidden fees</div><div class="price-details"><span class="price-detail"><span class="dl">Setup:</span> Free</span><span class="price-detail"><span class="dl">Transaction:</span> 3%</span><span class="price-detail"><span class="dl">Vendor tools:</span> Included</span></div></div>
             <div class="price-block"><img src="https://www.eventbrite.com/blog/wp-content/uploads/2025/02/Eventbrite_Hero-Lock-up_Brite-Orange.png" alt="Eventbrite" class="price-logo"><div class="price-amount" style="font-size:19px;margin-top:5px;color:var(--ev-muted)">Contact Sales</div><div class="price-note">Pricing not publicly listed</div><div class="price-details"><span class="price-detail"><span class="dl">Transaction:</span> 3.7% + $1.79</span><span class="price-detail"><span class="dl">Vendor tools:</span> Not available</span></div></div>
           </div>
 
@@ -527,20 +535,19 @@
         <div class="table-card-wrap">
         <div class="table-card">
           <div class="pricing-row">
-            <div class="price-block ev"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="Eventeny" class="price-logo"><div class="price-amount">$240<span style="font-size:15px;font-weight:400;opacity:.7">/mo</span></div><div class="price-note">Transparent, publicly listed pricing</div><div class="price-details"><span class="price-detail"><span class="dl">Setup:</span> Free</span><span class="price-detail"><span class="dl">Transaction:</span> 3%</span></div><a href="https://www.eventeny.com/product/pricing/" class="price-block-cta">Start Free</a></div>
+            <div class="price-block ev"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="Eventeny" class="price-logo"><div class="price-amount">$240<span style="font-size:15px;font-weight:400;opacity:.7">/mo</span></div><div class="price-note">Transparent, publicly listed pricing</div><div class="price-details"><span class="price-detail"><span class="dl">Setup:</span> Free</span><span class="price-detail"><span class="dl">Transaction:</span> 3%</span></div></div>
             <div class="price-block"><img src="https://developers.cvent.com/cvent-logo.png" alt="Cvent" class="price-logo"><div class="price-amount" style="font-size:19px;margin-top:5px;color:var(--ev-muted)">Contact Sales</div><div class="price-note">Enterprise pricing, not listed publicly</div><div class="price-details"><span class="price-detail"><span class="dl">Setup:</span> Contact for pricing</span><span class="price-detail"><span class="dl">Transaction:</span> Contact for pricing</span></div></div>
           </div>
           <div class="feat-layout">
             <div class="feat-col-categories">
               <div class="feat-col-header">Features</div>
               <div class="feat-cat-list">
-                <button class="feat-cat-btn active" data-cat="all">Select All Categories</button>
-                <button class="feat-cat-btn" data-cat="pricing">Pricing Transparency</button>
-                <button class="feat-cat-btn" data-cat="event-creation">Event Creation</button>
+                <button class="feat-cat-btn active" data-cat="event-creation">Event Creation</button>
                 <button class="feat-cat-btn" data-cat="artist-vendor">Artist and Vendor</button>
                 <button class="feat-cat-btn" data-cat="volunteer">Volunteer</button>
                 <button class="feat-cat-btn" data-cat="ticketing">Ticketing</button>
                 <button class="feat-cat-btn" data-cat="support">Support</button>
+                <button class="feat-cat-btn" data-cat="all">Select All Categories</button>
               </div>
             </div>
             <div class="feat-col-ev">
@@ -568,8 +575,6 @@
             <div class="feat-col-comp">
               <div class="feat-col-header comp-header">CVENT</div>
               <div class="feat-rows-wrap collapsible" id="cventCompRows">
-                <div class="feat-item" data-cat="pricing"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Publicly listed pricing</span></div>
-                <div class="feat-item" data-cat="pricing"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>No setup fees</span></div>
                 <div class="feat-item" data-cat="event-creation"><div class="feat-ico yes"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Unlimited events</span></div>
                 <div class="feat-item" data-cat="event-creation"><div class="feat-ico yes"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>In-person, hybrid and virtual</span></div>
                 <div class="feat-item" data-cat="event-creation"><div class="feat-ico yes"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Interactive scheduling</span></div>
@@ -601,7 +606,7 @@
         <div class="table-card-wrap">
         <div class="table-card">
           <div class="pricing-row">
-            <div class="price-block ev"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="Eventeny" class="price-logo"><div class="price-amount">$240<span style="font-size:15px;font-weight:400;opacity:.7">/mo</span></div><div class="price-note">Full event management. Flat monthly.</div><div class="price-details"><span class="price-detail"><span class="dl">Setup:</span> Free</span><span class="price-detail"><span class="dl">Transaction:</span> 3%</span></div><a href="https://www.eventeny.com/product/pricing/" class="price-block-cta">Start Free</a></div>
+            <div class="price-block ev"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="Eventeny" class="price-logo"><div class="price-amount">$240<span style="font-size:15px;font-weight:400;opacity:.7">/mo</span></div><div class="price-note">Full event management. Flat monthly.</div><div class="price-details"><span class="price-detail"><span class="dl">Setup:</span> Free</span><span class="price-detail"><span class="dl">Transaction:</span> 3%</span></div></div>
             <div class="price-block"><img src="/assets/logos/leap.png" alt="Leap Conventions" class="price-logo"><div class="price-amount" style="font-size:19px;margin-top:5px;color:var(--ev-muted)">Contact Sales</div><div class="price-note">Convention-focused pricing</div><div class="price-details"><span class="price-detail"><span class="dl">Setup:</span> Contact for pricing</span></div></div>
           </div>
           <div class="feat-layout">
@@ -670,8 +675,8 @@
         <div class="table-card-wrap">
         <div class="table-card">
           <div class="pricing-row">
-            <div class="price-block ev"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="Eventeny" class="price-logo"><div class="price-amount">$240<span style="font-size:15px;font-weight:400;opacity:.7">/mo</span></div><div class="price-note">Full platform. Applications included.</div><div class="price-details"><span class="price-detail"><span class="dl">Setup:</span> Free</span><span class="price-detail"><span class="dl">Per-app fees:</span> None</span></div><a href="https://www.eventeny.com/product/pricing/" class="price-block-cta">Start Free</a></div>
-            <div class="price-block"><img src="https://www.zapplication.org/images/ZAPP-Logo-artist.png" alt="Zapplication" class="price-logo"><div class="price-amount" style="color:var(--ev-body)">$2,700<span style="font-size:15px;font-weight:400">/yr</span></div><div class="price-note">Applications only. No ticketing.</div><div class="price-details"><span class="price-detail"><span class="dl">Setup:</span> $1,500</span><span class="price-detail"><span class="dl">Per-app:</span> From $1.99</span></div></div>
+            <div class="price-block ev"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="Eventeny" class="price-logo"><div class="price-amount">$240<span style="font-size:15px;font-weight:400;opacity:.7">/mo</span></div><div class="price-note">Full platform. Applications included.</div><div class="price-details"><span class="price-detail"><span class="dl">Setup:</span> Free</span><span class="price-detail"><span class="dl">Per-app fees:</span> None</span></div></div>
+            <div class="price-block"><img src="https://www.zapplication.org/images/ZAPP-Logo-artist.png" alt="Zapplication" class="price-logo" onerror="this.style.display='none'"><div class="price-amount" style="color:var(--ev-body)">$2,700<span style="font-size:15px;font-weight:400">/yr</span></div><div class="price-note">Applications only. No ticketing.</div><div class="price-details"><span class="price-detail"><span class="dl">Setup:</span> $1,500</span><span class="price-detail"><span class="dl">Per-app:</span> From $1.99</span></div></div>
           </div>
           <div class="feat-layout">
             <div class="feat-col-categories">
@@ -739,8 +744,8 @@
         <div class="table-card-wrap">
         <div class="table-card">
           <div class="pricing-row">
-            <div class="price-block ev"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="Eventeny" class="price-logo"><div class="price-amount">$240<span style="font-size:15px;font-weight:400;opacity:.7">/mo</span></div><div class="price-note">Flat monthly. Full booth management included.</div><div class="price-details"><span class="price-detail"><span class="dl">Setup:</span> Free</span><span class="price-detail"><span class="dl">Transaction:</span> 3%</span></div><a href="https://www.eventeny.com/product/pricing/" class="price-block-cta">Start Free</a></div>
-            <div class="price-block"><img src="https://boothcentral.com/wp-content/uploads/2019/03/logo_horizantal_gradient-e1553528157823.png" alt="BoothCentral" class="price-logo"><div class="price-amount" style="color:var(--ev-body)">$495<span style="font-size:15px;font-weight:400">/event</span></div><div class="price-note">Per-event pricing. Adds up fast.</div><div class="price-details"><span class="price-detail"><span class="dl">Setup:</span> Free</span><span class="price-detail"><span class="dl">Transaction:</span> Starting at $5/application</span></div></div>
+            <div class="price-block ev"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="Eventeny" class="price-logo"><div class="price-amount">$240<span style="font-size:15px;font-weight:400;opacity:.7">/mo</span></div><div class="price-note">Flat monthly. Full booth management included.</div><div class="price-details"><span class="price-detail"><span class="dl">Setup:</span> Free</span><span class="price-detail"><span class="dl">Transaction:</span> 3%</span></div></div>
+            <div class="price-block"><img src="https://boothcentral.com/wp-content/uploads/2019/03/logo_horizantal_gradient-e1553528157823.png" alt="BoothCentral" class="price-logo" onerror="this.style.display='none'"><div class="price-amount" style="color:var(--ev-body)">$495<span style="font-size:15px;font-weight:400">/event</span></div><div class="price-note">Per-event pricing. Adds up fast.</div><div class="price-details"><span class="price-detail"><span class="dl">Setup:</span> Free</span><span class="price-detail"><span class="dl">Transaction:</span> Starting at $5/application</span></div></div>
           </div>
           <div class="feat-layout">
             <div class="feat-col-categories">
@@ -808,7 +813,7 @@
         <div class="table-card-wrap">
         <div class="table-card">
           <div class="pricing-row">
-            <div class="price-block ev"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="Eventeny" class="price-logo"><div class="price-amount">$240<span style="font-size:15px;font-weight:400;opacity:.7">/mo</span></div><div class="price-note">Plus 3% transaction. Everything included.</div><div class="price-details"><span class="price-detail"><span class="dl">Setup:</span> Free</span><span class="price-detail"><span class="dl">Transaction:</span> 3%</span></div><a href="https://www.eventeny.com/product/pricing/" class="price-block-cta">Start Free</a></div>
+            <div class="price-block ev"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="Eventeny" class="price-logo"><div class="price-amount">$240<span style="font-size:15px;font-weight:400;opacity:.7">/mo</span></div><div class="price-note">Plus 3% transaction. Everything included.</div><div class="price-details"><span class="price-detail"><span class="dl">Setup:</span> Free</span><span class="price-detail"><span class="dl">Transaction:</span> 3%</span></div></div>
             <div class="price-block"><img src="https://cdn.uploads.webconnex.com/9/1609895824833-TicketSpice.png?1678751010048" alt="TicketSpice" class="price-logo"><div class="price-amount" style="color:var(--ev-body)">$0.99<span style="font-size:15px;font-weight:400">/attendee</span></div><div class="price-note">Plus 2.9% + $0.30 per transaction</div><div class="price-details"><span class="price-detail"><span class="dl">Setup:</span> Free</span></div></div>
           </div>
           <div class="feat-layout">
@@ -874,8 +879,8 @@
         <div class="table-card-wrap">
         <div class="table-card">
           <div class="pricing-row">
-            <div class="price-block ev"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="Eventeny" class="price-logo"><div class="price-amount">$240<span style="font-size:15px;font-weight:400;opacity:.7">/mo</span></div><div class="price-note">Transparent and flat. No surprises.</div><div class="price-details"><span class="price-detail"><span class="dl">Setup:</span> Free</span><span class="price-detail"><span class="dl">Transaction:</span> 3%</span></div><a href="https://www.eventeny.com/product/pricing/" class="price-block-cta">Start Free</a></div>
-            <div class="price-block"><img src="https://www.sanfordinternational.com/wp-content/uploads/2024/07/Tixr-Black-Logomark_Transparent-Background@2x-e1724264423700.png" alt="Tixr" class="price-logo"><div class="price-amount" style="font-size:19px;margin-top:5px;color:var(--ev-muted)">~10% reported</div><div class="price-note">Contact sales for actual pricing</div><div class="price-details"><span class="price-detail"><span class="dl">Setup:</span> Contact sales</span></div></div>
+            <div class="price-block ev"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="Eventeny" class="price-logo"><div class="price-amount">$240<span style="font-size:15px;font-weight:400;opacity:.7">/mo</span></div><div class="price-note">Transparent and flat. No surprises.</div><div class="price-details"><span class="price-detail"><span class="dl">Setup:</span> Free</span><span class="price-detail"><span class="dl">Transaction:</span> 3%</span></div></div>
+            <div class="price-block"><img src="https://www.sanfordinternational.com/wp-content/uploads/2024/07/Tixr-Black-Logomark_Transparent-Background@2x-e1724264423700.png" alt="Tixr" class="price-logo" onerror="this.style.display='none';this.nextElementSibling&&(this.nextElementSibling.textContent='Tixr')"><div class="price-amount" style="font-size:19px;margin-top:5px;color:var(--ev-muted)">~10% reported</div><div class="price-note">Contact sales for actual pricing</div><div class="price-details"><span class="price-detail"><span class="dl">Setup:</span> Contact sales</span></div></div>
           </div>
           <div class="feat-layout">
             <div class="feat-col-categories">
@@ -935,14 +940,12 @@
         </div>
       </div>
 
-    </div><!-- /hub-table-area -->
-
       <!-- ONEPLAN PANEL -->
       <div class="comp-panel" id="panel-oneplan">
         <div class="table-card-wrap">
         <div class="table-card">
           <div class="pricing-row">
-            <div class="price-block ev"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="Eventeny" class="price-logo"><div class="price-amount">$240<span style="font-size:15px;font-weight:400;opacity:.7">/mo</span></div><div class="price-note">Full event management. Flat monthly.</div><div class="price-details"><span class="price-detail"><span class="dl">Setup:</span> Free</span><span class="price-detail"><span class="dl">Transaction:</span> 3%</span></div><a href="https://www.eventeny.com/product/pricing/" class="price-block-cta">Start Free</a></div>
+            <div class="price-block ev"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="Eventeny" class="price-logo"><div class="price-amount">$240<span style="font-size:15px;font-weight:400;opacity:.7">/mo</span></div><div class="price-note">Full event management. Flat monthly.</div><div class="price-details"><span class="price-detail"><span class="dl">Setup:</span> Free</span><span class="price-detail"><span class="dl">Transaction:</span> 3%</span></div></div>
             <div class="price-block"><img src="/assets/logos/oneplan.png" alt="One Plan" class="price-logo"><div class="price-amount" style="font-size:19px;margin-top:5px;color:var(--ev-muted)">$690</div><div class="price-note">Mapping and site design only</div><div class="price-details"><span class="price-detail"><span class="dl">Setup:</span> Contact for pricing</span></div></div>
           </div>
           <div class="feat-layout">
@@ -1012,7 +1015,7 @@
         <div class="table-card-wrap">
         <div class="table-card">
           <div class="pricing-row">
-            <div class="price-block ev"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="Eventeny" class="price-logo"><div class="price-amount">$240<span style="font-size:15px;font-weight:400;opacity:.7">/mo</span></div><div class="price-note">Full event management. Flat monthly.</div><div class="price-details"><span class="price-detail"><span class="dl">Setup:</span> Free</span><span class="price-detail"><span class="dl">Transaction:</span> 3%</span></div><a href="https://www.eventeny.com/product/pricing/" class="price-block-cta">Start Free</a></div>
+            <div class="price-block ev"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="Eventeny" class="price-logo"><div class="price-amount">$240<span style="font-size:15px;font-weight:400;opacity:.7">/mo</span></div><div class="price-note">Full event management. Flat monthly.</div><div class="price-details"><span class="price-detail"><span class="dl">Setup:</span> Free</span><span class="price-detail"><span class="dl">Transaction:</span> 3%</span></div></div>
             <div class="price-block"><img src="/assets/logos/expofp.png" alt="ExpoFP" class="price-logo"><div class="price-amount" style="font-size:19px;margin-top:5px;color:var(--ev-muted)">Varies</div><div class="price-note">Floor plan tools only. No ticketing.</div><div class="price-details"><span class="price-detail"><span class="dl">Setup:</span> Contact for pricing</span></div></div>
           </div>
           <div class="feat-layout">
@@ -1082,7 +1085,7 @@
         <div class="table-card-wrap">
         <div class="table-card">
           <div class="pricing-row">
-            <div class="price-block ev"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="Eventeny" class="price-logo"><div class="price-amount">$240<span style="font-size:15px;font-weight:400;opacity:.7">/mo</span></div><div class="price-note">Full platform. Applications included.</div><div class="price-details"><span class="price-detail"><span class="dl">Setup:</span> Free</span><span class="price-detail"><span class="dl">Per-app fees:</span> None</span></div><a href="https://www.eventeny.com/product/pricing/" class="price-block-cta">Start Free</a></div>
+            <div class="price-block ev"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="Eventeny" class="price-logo"><div class="price-amount">$240<span style="font-size:15px;font-weight:400;opacity:.7">/mo</span></div><div class="price-note">Full platform. Applications included.</div><div class="price-details"><span class="price-detail"><span class="dl">Setup:</span> Free</span><span class="price-detail"><span class="dl">Per-app fees:</span> None</span></div></div>
             <div class="price-block"><img src="/assets/logos/mmm.png" alt="ManageMyMarket" class="price-logo"><div class="price-amount" style="font-size:19px;margin-top:5px;color:var(--ev-muted)">Contact Sales</div><div class="price-note">Market vendor tools. No ticketing.</div><div class="price-details"><span class="price-detail"><span class="dl">App fees:</span> Reset each year</span></div></div>
           </div>
           <div class="feat-layout">
@@ -1149,7 +1152,7 @@
         <div class="table-card-wrap">
         <div class="table-card">
           <div class="pricing-row">
-            <div class="price-block ev"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="Eventeny" class="price-logo"><div class="price-amount">$240<span style="font-size:15px;font-weight:400;opacity:.7">/mo</span></div><div class="price-note">Purpose-built for events. Everything included.</div><div class="price-details"><span class="price-detail"><span class="dl">Setup:</span> Free</span><span class="price-detail"><span class="dl">Transaction:</span> 3%</span></div><a href="https://www.eventeny.com/product/pricing/" class="price-block-cta">Start Free</a></div>
+            <div class="price-block ev"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="Eventeny" class="price-logo"><div class="price-amount">$240<span style="font-size:15px;font-weight:400;opacity:.7">/mo</span></div><div class="price-note">Purpose-built for events. Everything included.</div><div class="price-details"><span class="price-detail"><span class="dl">Setup:</span> Free</span><span class="price-detail"><span class="dl">Transaction:</span> 3%</span></div></div>
             <div class="price-block"><img src="/assets/logos/Jotform.png" alt="JotForm" class="price-logo"><div class="price-amount" style="font-size:19px;margin-top:5px;color:var(--ev-muted)">Free / $34+/mo</div><div class="price-note">Generic form builder. No event tools.</div></div>
           </div>
           <div class="feat-layout">
@@ -1219,7 +1222,7 @@
         <div class="table-card-wrap">
         <div class="table-card">
           <div class="pricing-row">
-            <div class="price-block ev"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="Eventeny" class="price-logo"><div class="price-amount">$240<span style="font-size:15px;font-weight:400;opacity:.7">/mo</span></div><div class="price-note">Purpose-built for events. Everything included.</div><div class="price-details"><span class="price-detail"><span class="dl">Setup:</span> Free</span><span class="price-detail"><span class="dl">Transaction:</span> 3%</span></div><a href="https://www.eventeny.com/product/pricing/" class="price-block-cta">Start Free</a></div>
+            <div class="price-block ev"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="Eventeny" class="price-logo"><div class="price-amount">$240<span style="font-size:15px;font-weight:400;opacity:.7">/mo</span></div><div class="price-note">Purpose-built for events. Everything included.</div><div class="price-details"><span class="price-detail"><span class="dl">Setup:</span> Free</span><span class="price-detail"><span class="dl">Transaction:</span> 3%</span></div></div>
             <div class="price-block"><img src="/assets/logos/googleforms.png" alt="Google Forms" class="price-logo"><div class="price-amount" style="font-size:19px;margin-top:5px;color:var(--ev-muted)">Free</div><div class="price-note">Basic data collection only. No event tools.</div></div>
           </div>
           <div class="feat-layout">
@@ -1289,7 +1292,7 @@
         <div class="table-card-wrap">
         <div class="table-card">
           <div class="pricing-row">
-            <div class="price-block ev"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="Eventeny" class="price-logo"><div class="price-amount">$240<span style="font-size:15px;font-weight:400;opacity:.7">/mo</span></div><div class="price-note">Full event management. Flat monthly.</div><div class="price-details"><span class="price-detail"><span class="dl">Setup:</span> Free</span><span class="price-detail"><span class="dl">Transaction:</span> 3%</span></div><a href="https://www.eventeny.com/product/pricing/" class="price-block-cta">Start Free</a></div>
+            <div class="price-block ev"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="Eventeny" class="price-logo"><div class="price-amount">$240<span style="font-size:15px;font-weight:400;opacity:.7">/mo</span></div><div class="price-note">Full event management. Flat monthly.</div><div class="price-details"><span class="price-detail"><span class="dl">Setup:</span> Free</span><span class="price-detail"><span class="dl">Transaction:</span> 3%</span></div></div>
             <div class="price-block"><img src="/assets/logos/regfox.png" alt="RegFox" class="price-logo"><div class="price-amount" style="font-size:19px;margin-top:5px;color:var(--ev-muted)">$0.99/attendee</div><div class="price-note">Registration only. No vendor or map tools.</div><div class="price-details"><span class="price-detail"><span class="dl">Transaction:</span> 2.9% + $0.30</span></div></div>
           </div>
           <div class="feat-layout">
@@ -1350,10 +1353,9 @@
         <div class="quote-strip"><div class="q-mark">"</div><div><blockquote>RegFox was easy for ticket sales. But we needed vendor applications, floor maps, and volunteer scheduling too. Eventeny handled all of it.</blockquote><cite>Kevin B., Operations Lead — Suncoast Community Festival</cite></div></div>
         </div>
       </div>
+
+    </div><!-- /hub-table-area -->
   </div>
-</section>
-
-
 </section>
 
 

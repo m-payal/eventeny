@@ -3,6 +3,18 @@
    Dependencies: jQuery 3.7.1
    ================================================================ */
 
+/* ── Prevent browser from restoring scroll position on refresh ── */
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}
+/* Strip any hash from URL on load so refresh always starts at top */
+window.addEventListener('load', function () {
+  if (window.location.hash) {
+    history.replaceState(null, '', window.location.pathname + window.location.search);
+  }
+  window.scrollTo(0, 0);
+});
+
 /* Global: show more / show less — single centered button controls both columns */
 function toggleFeatRows(evRowsId, compRowsId, btnId) {
   var evWrap   = document.getElementById(evRowsId);
@@ -68,10 +80,13 @@ function toggleFeatRows(evRowsId, compRowsId, btnId) {
     return ok;
   }
 
-  // Live clear on input
+  // Live clear on input + blur validation
   requiredFields.forEach(function (f) {
     var el = document.getElementById(f.id);
     el.addEventListener('input', function () {
+      validateField(f.id, f.errId);
+    });
+    el.addEventListener('blur', function () {
       validateField(f.id, f.errId);
     });
   });
@@ -178,9 +193,16 @@ function toggleFeatRows(evRowsId, compRowsId, btnId) {
           counterObserver.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.5 });
-  
-    $('[data-count]').each(function () { counterObserver.observe(this); });
+    }, { threshold: 0.1, rootMargin: '0px 0px -20px 0px' });
+
+    $('[data-count]').each(function () {
+      var rect = this.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        animateCounter($(this)); // already visible on load
+      } else {
+        counterObserver.observe(this);
+      }
+    });
   
 /* ────────────────────────────────────────────
    COMPARISON HUB
@@ -296,7 +318,16 @@ function toggleFeatRows(evRowsId, compRowsId, btnId) {
     }
   }
 
-  /* Card click — guard against swipe triggering activation */
+    /* Strip link — scroll to compare section without writing hash */
+    $(document).on('click', '#hubStripLink', function (e) {
+      e.preventDefault();
+      var target = $('#compare');
+      if (target.length) {
+        $('html, body').animate({ scrollTop: target.offset().top - 80 }, 320);
+      }
+    });
+
+    /* Card click — guard against swipe triggering activation */
   var _swipeStartX = 0;
   $(document).on('pointerdown touchstart', '.hub-card', function (e) {
     _swipeStartX = e.touches ? e.touches[0].clientX : e.clientX;
@@ -424,143 +455,6 @@ function toggleFeatRows(evRowsId, compRowsId, btnId) {
   activateCompetitor('eventbrite');
 
 })();
-
-/* ────────────────────────────────────────────
-   SMART EVENT FIT SELECTOR
-─────────────────────────────────────────────── */
-(function () {
-
-  var SINGLE_MAP = {
-    'ticketing': {
-      name: 'Eventbrite',
-      desc: 'Eventbrite specializes in ticketing, event promotion, and attendee registration for public events.',
-      btn:  { label: 'Compare with Eventeny', href: '#compare' }
-    },
-    'market': {
-      name: 'Manage My Market',
-      desc: 'Manage My Market focuses on vendor applications, booth assignments, and market management for festivals.',
-      btn:  { label: 'Compare with Eventeny', href: '#compare' }
-    },
-    'conference': {
-      name: 'Cvent',
-      desc: 'Cvent specializes in enterprise event planning, corporate conferences, venue sourcing, and attendee management.',
-      btn:  { label: 'Compare with Eventeny', href: '#compare' }
-    },
-    'convention': {
-      name: 'Leap Conventions',
-      desc: 'Leap Conventions focuses on convention and fan event management with badge sales, panels, and exhibitor coordination.',
-      btn:  { label: 'Compare with Eventeny', href: '#compare' }
-    },
-    'vendors': {
-      name: 'BoothCentral',
-      desc: 'BoothCentral specializes in vendor and exhibitor booth applications and booth space assignment.',
-      btn:  { label: 'Compare with Eventeny', href: '#compare' }
-    },
-    'corporate-projects': {
-      name: 'Cvent',
-      desc: 'Cvent specializes in enterprise event planning, corporate conferences, venue sourcing, and attendee management.',
-      btn:  { label: 'Compare with Eventeny', href: '#compare' }
-    },
-    'mapping': {
-      name: 'OnePlan',
-      desc: 'OnePlan focuses on event site planning, venue layout mapping, and operational logistics.',
-      btn:  { label: 'Compare with Eventeny', href: '#compare' }
-    },
-    'artists': {
-      name: 'Zapplication',
-      desc: 'Zapplication focuses on jury-based artist applications and management for art festivals and craft shows.',
-      btn:  { label: 'Compare with Eventeny', href: '#compare' }
-    },
-    'promotion': {
-      name: 'Eventbrite',
-      desc: 'Eventbrite specializes in ticketing, event promotion, and attendee registration for public events.',
-      btn:  { label: 'Compare with Eventeny', href: '#compare' }
-    }
-  };
-
-  var selected = [];
-
-  $(document).on('click', '.sef-chip', function () {
-    var $chip = $(this);
-    var val   = $chip.data('value');
-    if ($chip.hasClass('selected')) {
-      $chip.removeClass('selected');
-      selected = selected.filter(function (v) { return v !== val; });
-    } else {
-      $chip.addClass('selected');
-      if (selected.indexOf(val) === -1) selected.push(val);
-    }
-    render();
-  });
-
-  $(document).on('click', '#sefResetBtn', function () {
-    selected = [];
-    $('.sef-chip').removeClass('selected');
-    var $el = $('#sefResult');
-    $el.removeClass('show').html('');
-    $('html, body').animate({ scrollTop: $('#smartFit').offset().top - 80 }, 300);
-  });
-
-  function render() {
-    var $el = $('#sefResult');
-
-    if (selected.length === 0) {
-      $el.removeClass('show').html('');
-      return;
-    }
-
-    var html;
-
-    if (selected.length === 1) {
-      var key  = selected[0];
-      var data = SINGLE_MAP[key];
-      html = '<div class="sef-result-card">'
-        + '<div class="sef-fit-badge"><span class="sef-fit-badge-icon">★</span> Best Fit Identified</div>'
-        + '<div class="sef-result-body">'
-        +   '<div>'
-        +     '<div class="sef-result-title">Recommended: ' + data.name + '</div>'
-        +     '<p class="sef-result-desc">' + data.desc + '</p>'
-        +   '</div>'
-        +   '<div class="sef-result-ctas">'
-        +     '<a href="' + data.btn.href + '" class="sef-btn-primary">' + data.btn.label + '</a>'
-        +     '<button id="sefResetBtn" class="sef-reset">Start over</button>'
-        +   '</div>'
-        + '</div>'
-        + '</div>';
-    } else {
-      var selectedLabels = selected.map(function (v) {
-        return $('.sef-chip[data-value="' + v + '"]').text().trim();
-      });
-      var labelsHtml = selectedLabels.map(function (l) {
-        return '<strong>' + l + '</strong>';
-      }).join(', ');
-      html = '<div class="sef-result-card">'
-        + '<div class="sef-fit-badge"><span class="sef-fit-badge-icon">★</span> Best Fit Identified</div>'
-        + '<div class="sef-result-body">'
-        +   '<div>'
-        +     '<div class="sef-result-title">Recommended: Eventeny</div>'
-        +     '<p class="sef-result-desc">Most platforms solve one piece of the event puzzle. Eventeny tries to solve the whole thing.</p>'
-        +     '<div class="sef-note">'
-        +       '<span class="sef-note-icon">i</span>'
-        +       '<span>You selected ' + labelsHtml + '. Eventeny handles all of these under a single login — no third-party tools required.</span>'
-        +     '</div>'
-        +   '</div>'
-        +   '<div class="sef-result-ctas">'
-        +     '<a href="#" class="sef-btn-primary">See the features</a>'
-        +     '<button id="sefResetBtn" class="sef-reset">Start over</button>'
-        +   '</div>'
-        + '</div>'
-        + '</div>';
-    }
-
-    var wasShown = $el.hasClass('show');
-    $el.html(html);
-    if (!wasShown) {
-      $el.addClass('show');
-      $('html, body').animate({ scrollTop: $el.offset().top - 120 }, 380);
-    }
-  }
-
   /* ────────────────────────────────────────────
      FEATURE CATEGORY FILTER (Eventbrite panel)
   ─────────────────────────────────────────────── */
@@ -587,5 +481,3 @@ function toggleFeatRows(evRowsId, compRowsId, btnId) {
   });
 
 })();
-
-  });
