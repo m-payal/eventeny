@@ -975,8 +975,8 @@
      padding: 12px 14px 14px;
    }
    .hub-card-label {
-     font-size: 10px; font-weight: 600;
-     color: var(--ev-muted);
+     font-size: 14px; font-weight: 600;
+     color: var(--ev-teal-dark);
      text-transform: uppercase; letter-spacing: 0.06em;
      margin-bottom: 2px;
    }
