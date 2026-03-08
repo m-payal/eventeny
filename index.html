@@ -1,0 +1,1318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Compare Eventeny with others</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,600;1,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav id="mainNav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo" style="display:flex;align-items:center;">
+      <img src="/assets/logos/logo.png" alt="Eventeny logo" style="height:40px;">
+    </a>
+    <ul class="nav-links">
+      <li class="nav-item" id="organizeItem">
+        <button class="nav-btn" id="organizeBtn" aria-expanded="false">
+          Organize
+          <svg class="nav-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="nav-dropdown" id="organizeDropdown">
+          <div class="dropdown-inner">
+            <div class="dropdown-col">
+              <div class="dropdown-heading">Event Management Tools</div>
+              <a href="#" class="dropdown-link"><span class="dd-icon"><svg viewBox="0 0 18 18" fill="none"><path d="M9 2C6.24 2 4 4.24 4 7c0 3.75 5 9 5 9s5-5.25 5-9c0-2.76-2.24-5-5-5z" stroke="currentColor" stroke-width="1.5"/><circle cx="9" cy="7" r="2" stroke="currentColor" stroke-width="1.5"/></svg></span>Event mapping</a>
+              <a href="#" class="dropdown-link"><span class="dd-icon"><svg viewBox="0 0 18 18" fill="none"><rect x="2" y="6" width="14" height="9" rx="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M6 6V5a3 3 0 016 0v1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>Ticketing / registration</a>
+              <a href="#" class="dropdown-link"><span class="dd-icon"><svg viewBox="0 0 18 18" fill="none"><rect x="1" y="5" width="16" height="11" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M6 5V3.5A2.5 2.5 0 0112 3.5V5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M5 10h4M5 13h2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>Artist, vendor &amp; exhibitor management</a>
+              <a href="#" class="dropdown-link"><span class="dd-icon"><svg viewBox="0 0 18 18" fill="none"><path d="M9 2a3 3 0 100 6 3 3 0 000-6z" stroke="currentColor" stroke-width="1.5"/><path d="M3 16s-.5-6 6-6 6 6 6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>Volunteer management</a>
+              <a href="#" class="dropdown-link"><span class="dd-icon"><svg viewBox="0 0 18 18" fill="none"><path d="M2.5 13.5L9 2l6.5 11.5H2.5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></span>Sponsor management</a>
+              <a href="#" class="dropdown-link"><span class="dd-icon"><svg viewBox="0 0 18 18" fill="none"><rect x="2" y="3" width="14" height="12" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M6 8h6M6 11h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>Event programming &amp; talent management <span class="dd-new">New</span></a>
+              <a href="#" class="dropdown-link"><span class="dd-icon"><svg viewBox="0 0 18 18" fill="none"><rect x="2" y="2" width="14" height="14" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M6 7h6M6 10h6M6 13h3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>Interactive schedules</a>
+              <a href="#" class="dropdown-link"><span class="dd-icon"><svg viewBox="0 0 18 18" fill="none"><rect x="2" y="11" width="4" height="5" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="7" y="7" width="4" height="9" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="12" y="3" width="4" height="13" rx="1" stroke="currentColor" stroke-width="1.5"/></svg></span>Hardware solutions</a>
+              <a href="#" class="dropdown-link"><span class="dd-icon"><svg viewBox="0 0 18 18" fill="none"><rect x="4" y="1" width="10" height="16" rx="2.5" stroke="currentColor" stroke-width="1.5"/><circle cx="9" cy="14" r="1" fill="currentColor"/></svg></span>Mobile app for organizers <span class="dd-new">New</span></a>
+              <a href="#" class="dropdown-link"><span class="dd-icon"><svg viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M9 5.5v3.5l2.5 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>Solutions by event type</a>
+            </div>
+            <div class="dropdown-col">
+              <div class="dropdown-heading">About Eventeny</div>
+              <a href="#" class="dropdown-link"><span class="dd-icon"><svg viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M9 8v5M9 6v.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>Product overview</a>
+              <a href="#" class="dropdown-link"><span class="dd-icon"><svg viewBox="0 0 18 18" fill="none"><path d="M9 16S2 12 2 7a5 5 0 0114 0c0 5-7 9-7 9z" stroke="currentColor" stroke-width="1.5"/></svg></span>Company values</a>
+              <a href="#" class="dropdown-link"><span class="dd-icon"><svg viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M6.5 11.5c0-1.5 1-2 2.5-2.5s2-1 2-2a2 2 0 00-4 0" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="9" cy="14" r=".8" fill="currentColor"/></svg></span>Pricing</a>
+            </div>
+            <div class="dropdown-col">
+              <div class="dropdown-heading">Helpful Resources</div>
+              <a href="#" class="dropdown-link"><span class="dd-icon"><svg viewBox="0 0 18 18" fill="none"><path d="M3 2h9l4 4v10H3V2z" stroke="currentColor" stroke-width="1.5"/><path d="M12 2v4h4" stroke="currentColor" stroke-width="1.5"/><path d="M6 9h6M6 12h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>Knowledge base</a>
+              <a href="#" class="dropdown-link"><span class="dd-icon"><svg viewBox="0 0 18 18" fill="none"><path d="M15 2H3a1 1 0 00-1 1v8a1 1 0 001 1h3v3l3.5-3H15a1 1 0 001-1V3a1 1 0 00-1-1z" stroke="currentColor" stroke-width="1.5"/></svg></span>Community center</a>
+              <a href="#" class="dropdown-link"><span class="dd-icon"><svg viewBox="0 0 18 18" fill="none"><path d="M9 3a6 6 0 100 12A6 6 0 009 3z" stroke="currentColor" stroke-width="1.5"/><path d="M9 6v4M7 10h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>Comparison guide</a>
+              <a href="#" class="dropdown-link"><span class="dd-icon"><svg viewBox="0 0 18 18" fill="none"><path d="M3 2h9l4 4v10H3V2z" stroke="currentColor" stroke-width="1.5"/><path d="M6 8h6M6 11h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>Blog</a>
+              <a href="#" class="dropdown-link"><span class="dd-icon"><svg viewBox="0 0 18 18" fill="none"><path d="M16 9A7 7 0 112 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M9 5v4l3 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>Contact sales</a>
+              <a href="#" class="dropdown-link"><span class="dd-icon"><svg viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M9 5v4l2.5 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>Product updates</a>
+              <a href="#" class="dropdown-link"><span class="dd-icon"><svg viewBox="0 0 18 18" fill="none"><rect x="2" y="3" width="14" height="12" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M6 8h6M6 11h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>Case studies</a>
+            </div>
+          </div>
+          <div class="dropdown-footer">
+            <a href="#" class="dd-footer-btn dd-footer-ghost">See all events</a>
+            <a href="#" class="dd-footer-btn dd-footer-teal">Create an Event</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item" id="participateItem">
+        <button class="nav-btn" id="participateBtn" aria-expanded="false">
+          Participate
+          <svg class="nav-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="nav-dropdown" id="participateDropdown">
+          <div class="dropdown-inner">
+            <div class="dropdown-col">
+              <div class="dropdown-heading" style="color:#00c4a7;">Artists, Vendors &amp; Exhibitors</div>
+              <a href="#" class="dropdown-link"><span class="dd-icon"><svg viewBox="0 0 18 18" fill="none"><rect x="2" y="3" width="14" height="12" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M6 8h6M6 11h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>Your applications</a>
+              <a href="#" class="dropdown-link"><span class="dd-icon"><svg viewBox="0 0 18 18" fill="none"><rect x="1" y="6" width="16" height="10" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M6 6V4.5A3 3 0 0112 4.5V6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>Create a shop page</a>
+              <a href="#" class="dropdown-link"><span class="dd-icon"><svg viewBox="0 0 18 18" fill="none"><rect x="2" y="3" width="14" height="12" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M6 9h6M9 6v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>View your sales</a>
+            </div>
+            <div class="dropdown-col">
+              <div class="dropdown-heading" style="color:#f97316;">Ticket Buyers / Attendees</div>
+              <a href="#" class="dropdown-link"><span class="dd-icon"><svg viewBox="0 0 18 18" fill="none"><rect x="2" y="6" width="14" height="9" rx="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M6 6V5a3 3 0 016 0v1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>Your tickets</a>
+              <a href="#" class="dropdown-link"><span class="dd-icon"><svg viewBox="0 0 18 18" fill="none"><path d="M3 3h12l-1.5 10H4.5L3 3z" stroke="currentColor" stroke-width="1.5"/><path d="M7 7v2a2 2 0 004 0V7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>Your orders</a>
+            </div>
+            <div class="dropdown-col">
+              <div class="dropdown-heading" style="color:#9b59b6;">Volunteers</div>
+              <a href="#" class="dropdown-link"><span class="dd-icon"><svg viewBox="0 0 18 18" fill="none"><rect x="2" y="3" width="14" height="12" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M6 8h6M6 11h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>Your applications</a>
+            </div>
+            <div class="dropdown-col">
+              <div class="dropdown-heading" style="color:#e91e8c;">Sponsors</div>
+              <a href="#" class="dropdown-link"><span class="dd-icon"><svg viewBox="0 0 18 18" fill="none"><rect x="2" y="3" width="14" height="12" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M6 8h6M6 11h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>Your sponsorships</a>
+              <a href="#" class="dropdown-link"><span class="dd-icon"><svg viewBox="0 0 18 18" fill="none"><rect x="1" y="6" width="16" height="10" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M6 6V4.5A3 3 0 0112 4.5V6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>Create a shop page</a>
+              <a href="#" class="dropdown-link"><span class="dd-icon"><svg viewBox="0 0 18 18" fill="none"><rect x="2" y="3" width="14" height="12" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M6 9h6M9 6v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>View your sales</a>
+            </div>
+          </div>
+          <div class="dropdown-footer dropdown-footer-4col">
+            <a href="#" class="dd-footer-btn dd-footer-ghost">Explore new applications</a>
+            <a href="#" class="dd-footer-btn dd-footer-ghost">Download the mobile app</a>
+            <a href="#" class="dd-footer-btn dd-footer-ghost">Browse help articles</a>
+            <a href="#" class="dd-footer-btn dd-footer-teal">Find your next event</a>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <div class="nav-search">
+      <button class="search-btn" type="button" aria-label="Search">
+        <svg viewBox="0 0 20 20" fill="none"><circle cx="8.5" cy="8.5" r="5.5" stroke="currentColor" stroke-width="1.8"/><path d="M13 13l4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+      <input type="text" class="nav-search-input" placeholder="Search for events, applications, tickets or products.">
+    </div>
+    <div class="nav-cta">
+      <div class="nav-avatar">P</div>
+      <button class="nav-avatar-chevron" type="button" aria-label="Account menu">
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="container">
+
+    <div class="hero-left">
+      <div class="hero-badge"><span class="badge-dot"></span>Everything Your Event Needs. One Platform.</div>
+      <h1>Look and Compare.<br> <em>Eventeny Is There.</em></h1>
+      <p class="hero-sub">10,000+ event organizers switched to Eventeny for modern, streamlined workflows built specifically for festivals and conventions.</p>
+      <div class="hero-actions">
+        <a href="https://www.eventeny.com/product/pricing/" class="btn-hero">Get Started for free</a>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <span class="spark">✦</span>
+      <span class="spark">✦</span>
+      <span class="spark">✦</span>
+      <span class="spark">✦</span>
+      <div class="fox-wrap">
+        <div class="fox-glow"></div>
+        <img src="assets/hero.png" alt="Eventeny mascot">
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-inner">
+    <div class="trust-item">
+      <div class="trust-num" data-count="10500" data-suffix="+">0+</div>
+      <div class="trust-label">Global Events Hosted</div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-num" data-count="460" data-suffix="K+">0</div>
+      <div class="trust-label">Vendors in the Community</div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-num" data-count="48" data-decimal="true" data-suffix=" ★">0</div>
+      <div class="trust-label">Average Customer Rating</div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-num" data-count="24" data-suffix=" /7">0</div>
+      <div class="trust-label">Live Customer Support</div>
+    </div>
+  </div>
+</div>
+
+<!-- COMPARISON HUB -->
+<section class="hub-section" id="compare">
+  <div class="container">
+    <div class="hub-header reveal">
+      <div class="eyebrow">Detailed Feature Comparison</div>
+      <h2 class="section-title">Pick a platform. See the difference instantly.</h2>
+      <p class="section-desc">Browse each platform, preview what it specializes in, and compare features with.</p>
+    </div>
+
+    <!-- Card rail -->
+    <div class="hub-rail-wrap">
+      <button class="hub-rail-btn hub-rail-prev" id="hubPrev" aria-label="Scroll left">
+        <svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M11 4L6 9l5 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="hub-rail-overflow">
+        <div class="hub-rail" id="hubRail">
+        <button class="hub-card active" data-comp="eventbrite" aria-pressed="true">
+          <div class="hub-card-img"><img src="/assets/Eventbrite.png" alt="Eventbrite"></div>
+          <div class="hub-card-body">
+            <div class="hub-card-label">Eventeny vs</div>
+            <div class="hub-card-name">Eventbrite</div>
+            <div class="hub-card-tag">Ticketing &amp; promotion</div>
+          </div>
+          <div class="hub-card-hover">Eventbrite focuses on ticketing, event promotion, and attendee registration for public events.</div>
+        </button>
+
+        <button class="hub-card" data-comp="cvent" aria-pressed="false">
+          <div class="hub-card-img"><img src="/assets/cvent.png" alt="Cvent"></div>
+          <div class="hub-card-body">
+            <div class="hub-card-label">Eventeny vs</div>
+            <div class="hub-card-name">Cvent</div>
+            <div class="hub-card-tag">Enterprise conferences</div>
+          </div>
+          <div class="hub-card-hover">Cvent specializes in enterprise event planning, corporate conferences, and venue sourcing.</div>
+        </button>
+
+        <button class="hub-card" data-comp="leap" aria-pressed="false">
+          <div class="hub-card-img"><img src="/assets/leap.png" alt="Leap Conventions"></div>
+          <div class="hub-card-body">
+            <div class="hub-card-label">Eventeny vs</div>
+            <div class="hub-card-name">Leap Conventions</div>
+            <div class="hub-card-tag">Fan events &amp; conventions</div>
+          </div>
+          <div class="hub-card-hover">Leap Conventions focuses on convention and fan event management with badge sales, panels, and exhibitor coordination.</div>
+        </button>
+
+        <button class="hub-card" data-comp="zapplication" aria-pressed="false">
+          <div class="hub-card-img"><img src="/assets/zapp.png" alt="Zapplication"></div>
+          <div class="hub-card-body">
+            <div class="hub-card-label">Eventeny vs</div>
+            <div class="hub-card-name">Zapplication</div>
+            <div class="hub-card-tag">Artist applications</div>
+          </div>
+          <div class="hub-card-hover">Zapplication focuses on jury-based artist applications and management for art festivals and craft shows.</div>
+        </button>
+
+        <button class="hub-card" data-comp="boothcentral" aria-pressed="false">
+          <div class="hub-card-img"><img src="/assets/boothcentral.png" alt="BoothCentral"></div>
+          <div class="hub-card-body">
+            <div class="hub-card-label">Eventeny vs</div>
+            <div class="hub-card-name">BoothCentral</div>
+            <div class="hub-card-tag">Booth applications</div>
+          </div>
+          <div class="hub-card-hover">BoothCentral specializes in vendor and exhibitor booth applications and booth space assignment.</div>
+        </button>
+
+        <button class="hub-card" data-comp="ticketspice" aria-pressed="false">
+          <div class="hub-card-img"><img src="/assets/Ticketspice.png" alt="TicketSpice"></div>
+          <div class="hub-card-body">
+            <div class="hub-card-label">Eventeny vs</div>
+            <div class="hub-card-name">TicketSpice</div>
+            <div class="hub-card-tag">Custom ticketing</div>
+          </div>
+          <div class="hub-card-hover">TicketSpice specializes in customizable ticket sales and event registration with flexible pricing.</div>
+        </button>
+
+        <button class="hub-card" data-comp="tixr" aria-pressed="false">
+          <div class="hub-card-img"><img src="/assets/tixr.png" alt="Tixr"></div>
+          <div class="hub-card-body">
+            <div class="hub-card-label">Eventeny vs</div>
+            <div class="hub-card-name">Tixr</div>
+            <div class="hub-card-tag">Premium live experiences</div>
+          </div>
+          <div class="hub-card-hover">Tixr focuses on premium ticketing and branded ticket sales for entertainment and live experiences.</div>
+        </button>
+
+        <button class="hub-card" data-comp="oneplan" aria-pressed="false">
+          <div class="hub-card-img"><img src="/assets/oneplan.png" alt="OnePlan"></div>
+          <div class="hub-card-body">
+            <div class="hub-card-label">Eventeny vs</div>
+            <div class="hub-card-name">OnePlan</div>
+            <div class="hub-card-tag">Event mapping &amp; safety</div>
+          </div>
+          <div class="hub-card-hover">OnePlan focuses on event site design, interactive mapping, and safety planning for large-scale events.</div>
+        </button>
+
+        <button class="hub-card" data-comp="expofp" aria-pressed="false">
+          <div class="hub-card-img"><img src="/assets/expofp.jpeg" alt="ExpoFP"></div>
+          <div class="hub-card-body">
+            <div class="hub-card-label">Eventeny vs</div>
+            <div class="hub-card-name">ExpoFP</div>
+            <div class="hub-card-tag">Floor plan management</div>
+          </div>
+          <div class="hub-card-hover">ExpoFP specializes in interactive floor plans and exhibitor space management for expos and trade shows.</div>
+        </button>
+
+        <button class="hub-card" data-comp="managemymarket" aria-pressed="false">
+          <div class="hub-card-img"><img src="/assets/mmm.png" alt="Manage My Market"></div>
+          <div class="hub-card-body">
+            <div class="hub-card-label">Eventeny vs</div>
+            <div class="hub-card-name">Manage My Market</div>
+            <div class="hub-card-tag">Market vendor tools</div>
+          </div>
+          <div class="hub-card-hover">Manage My Market focuses on vendor applications and booth management for farmers markets and craft fairs.</div>
+        </button>
+
+        <button class="hub-card" data-comp="jotform" aria-pressed="false">
+          <div class="hub-card-img"><img src="/assets/jotform.png" alt="Jotform"></div>
+          <div class="hub-card-body">
+            <div class="hub-card-label">Eventeny vs</div>
+            <div class="hub-card-name">Jotform</div>
+            <div class="hub-card-tag">Form building</div>
+          </div>
+          <div class="hub-card-hover">Jotform is a general-purpose form builder with no event-specific tools for vendors, volunteers, mapping, or ticketing.</div>
+        </button>
+
+        <button class="hub-card" data-comp="googleforms" aria-pressed="false">
+          <div class="hub-card-img"><img src="/assets/google.png" alt="Google Forms"></div>
+          <div class="hub-card-body">
+            <div class="hub-card-label">Eventeny vs</div>
+            <div class="hub-card-name">Google Forms</div>
+            <div class="hub-card-tag">Form building</div>
+          </div>
+          <div class="hub-card-hover">Google Forms is a free form tool for basic data collection with no event management features whatsoever.</div>
+        </button>
+
+        <button class="hub-card" data-comp="regfox" aria-pressed="false">
+          <div class="hub-card-img"><img src="/assets/regfox.png" alt="RegFox"></div>
+          <div class="hub-card-body">
+            <div class="hub-card-label">Eventeny vs</div>
+            <div class="hub-card-name">RegFox</div>
+            <div class="hub-card-tag">Event registration</div>
+          </div>
+          <div class="hub-card-hover">RegFox focuses on custom event registration and ticketing workflows but lacks vendor, volunteer, and mapping tools.</div>
+        </button>
+      </div><!-- /hub-rail -->
+      </div><!-- /hub-rail-overflow -->
+      <button class="hub-rail-btn hub-rail-next" id="hubNext" aria-label="Scroll right">
+        <svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M7 4l5 5-5 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+
+    <!-- Comparison heading — above the teal strip -->
+    <div class="hub-vs-heading" id="hubVsHeading">
+      <span class="hub-vs-ev">Eventeny</span> Vs Eventbrite
+    </div>
+
+    <!-- Context strip -->
+    <div class="hub-strip" id="hubStrip">
+      <div class="hub-strip-inner">
+        <div class="hub-strip-text" id="hubStripText"></div>
+        <div class="hub-strip-actions">
+          <div class="hub-strip-badge" id="hubStripBadge">Eventeny wins 9 of 11 features</div>
+          <a href="#" class="hub-strip-link" id="hubStripLink">View Comparison</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dynamic table -->
+    <div class="hub-table-area" id="hubTableArea">
+      <!-- Panels injected here -->
+
+      <div class="comp-panel active" id="panel-eventbrite">
+        <div class="table-card-wrap">
+        <div class="score-banner">
+          <div class="score-text"><span class="score-badge">Eventeny wins 9 of 11 features</span> vs Eventbrite</div>
+          <a href="https://www.eventeny.com/product/pricing/" class="score-cta">Start Free</a>
+        </div>
+        <div class="table-card">
+          <!-- Pricing row -->
+          <div class="pricing-row">
+            <div class="price-block ev"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="Eventeny" class="price-logo"><div class="price-amount">$240<span style="font-size:15px;font-weight:400;opacity:.7">/mo</span></div><div class="price-note">All features included, no hidden fees</div><div class="price-details"><span class="price-detail"><span class="dl">Setup:</span> Free</span><span class="price-detail"><span class="dl">Transaction:</span> 3%</span><span class="price-detail"><span class="dl">Vendor tools:</span> Included</span></div><a href="https://www.eventeny.com/product/pricing/" class="price-block-cta">Start Free</a></div>
+            <div class="price-block"><img src="https://www.eventbrite.com/blog/wp-content/uploads/2025/02/Eventbrite_Hero-Lock-up_Brite-Orange.png" alt="Eventbrite" class="price-logo"><div class="price-amount" style="font-size:19px;margin-top:5px;color:var(--ev-muted)">Contact Sales</div><div class="price-note">Pricing not publicly listed</div><div class="price-details"><span class="price-detail"><span class="dl">Transaction:</span> 3.7% + $1.79</span><span class="price-detail"><span class="dl">Vendor tools:</span> Not available</span></div></div>
+          </div>
+
+          <!-- New 3-column feature layout -->
+          <div class="feat-layout">
+
+            <!-- LEFT: Category filter column -->
+            <div class="feat-col-categories">
+              <div class="feat-col-header">Features</div>
+              <div class="feat-cat-list" id="ebCatList">
+                <button class="feat-cat-btn active" data-cat="event-creation">Event Creation Essentials</button>
+                <button class="feat-cat-btn" data-cat="artist-vendor">Artist and vendor management</button>
+                <button class="feat-cat-btn" data-cat="volunteer">Volunteer Recruitment</button>
+                <button class="feat-cat-btn" data-cat="ticketing">Ticketing and Entry</button>
+                <button class="feat-cat-btn" data-cat="support">Support</button>
+                <button class="feat-cat-btn" data-cat="all">Select All Categories</button>
+              </div>
+            </div>
+
+            <!-- CENTER: Eventeny column -->
+            <div class="feat-col-ev">
+              <div class="feat-col-header ev-header">
+                <img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="eventeny" style="height:20px;filter:brightness(0) invert(1);object-fit:contain;">
+                <span class="rec-chip" style="margin-left:8px;">Recommended</span>
+              </div>
+              <div class="feat-rows-wrap collapsible" id="ebEvRows">
+                <!-- Event Creation -->
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico yes"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Unlimited events</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico yes"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>In-person, hybrid, and virtual events</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico yes"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Video and live streaming</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico yes"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Personalized event suite</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico yes"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Interactive scheduling</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico yes"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Customized event mapping</span></div>
+                <!-- Artist/Vendor -->
+                <div class="feat-item" data-cat="artist-vendor"><div class="feat-ico yes"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Vendor Management</span></div>
+                <div class="feat-item" data-cat="artist-vendor"><div class="feat-ico yes"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Custom application questions</span></div>
+                <div class="feat-item" data-cat="artist-vendor"><div class="feat-ico yes"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Jury process built-in</span></div>
+                <!-- Volunteer -->
+                <div class="feat-item" data-cat="volunteer"><div class="feat-ico yes"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Volunteer management</span></div>
+                <div class="feat-item" data-cat="volunteer"><div class="feat-ico yes"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Custom departments and shifts</span></div>
+                <!-- Ticketing -->
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico yes"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Unlimited ticket types</span></div>
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico yes"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Touchless ticketing</span></div>
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico yes"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Hardware rental options</span></div>
+                <!-- Support -->
+                <div class="feat-item" data-cat="support"><div class="feat-ico yes"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Dedicated account manager</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico yes"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Phone and email support</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico yes"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>In-house development team</span></div>
+              </div>
+              <button class="feat-show-more-btn" id="ebEvShowMore" onclick="toggleFeatRows('ebEvRows','ebEvShowMore')">Show more</button>
+            </div>
+
+            <!-- RIGHT: Eventbrite column -->
+            <div class="feat-col-comp">
+              <div class="feat-col-header comp-header">EVENTBRITE</div>
+              <div class="feat-rows-wrap collapsible" id="ebCompRows">
+                <!-- Event Creation -->
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico yes"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Unlimited events</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico yes"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>In-person, hybrid, and virtual events</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico yes"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Video and live streaming</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Personalized event suite</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Interactive scheduling</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Customized event mapping</span></div>
+                <!-- Artist/Vendor -->
+                <div class="feat-item" data-cat="artist-vendor"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Vendor Management</span></div>
+                <div class="feat-item" data-cat="artist-vendor"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Custom application questions</span></div>
+                <div class="feat-item" data-cat="artist-vendor"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Jury process built-in</span></div>
+                <!-- Volunteer -->
+                <div class="feat-item" data-cat="volunteer"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Volunteer management</span></div>
+                <div class="feat-item" data-cat="volunteer"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Custom departments and shifts</span></div>
+                <!-- Ticketing -->
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico yes"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Unlimited ticket types</span></div>
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico yes"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Touchless ticketing</span></div>
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico part">~</div><span>Hardware rental options <span class="pill pill-amber" style="font-size:10px;">Partners only</span></span></div>
+                <!-- Support -->
+                <div class="feat-item" data-cat="support"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Dedicated account manager</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico part">~</div><span>Phone and email support <span class="pill pill-amber" style="font-size:10px;">Email only</span></span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>In-house development team</span></div>
+              </div>
+              <button class="feat-show-more-btn comp-show-more" id="ebCompShowMore" onclick="toggleFeatRows('ebCompRows','ebCompShowMore')">Show more</button>
+            </div>
+
+          </div><!-- /feat-layout -->
+        </div>
+        <div class="quote-strip"><div class="q-mark">"</div><div><blockquote>We switched from Eventbrite after our first year. The vendor management alone saved us 20+ hours per event. Nothing compares for multi-track festivals.</blockquote><cite>Sarah M., Festival Director — Atlanta Arts Weekend</cite></div></div>
+        </div>
+      </div>
+
+      <!-- CVENT PANEL -->
+      <div class="comp-panel" id="panel-cvent">
+        <div class="table-card-wrap">
+        <div class="table-card">
+          <div class="pricing-row">
+            <div class="price-block ev"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="Eventeny" class="price-logo"><div class="price-amount">$240<span style="font-size:15px;font-weight:400;opacity:.7">/mo</span></div><div class="price-note">Transparent, publicly listed pricing</div><div class="price-details"><span class="price-detail"><span class="dl">Setup:</span> Free</span><span class="price-detail"><span class="dl">Transaction:</span> 3%</span></div><a href="https://www.eventeny.com/product/pricing/" class="price-block-cta">Start Free</a></div>
+            <div class="price-block"><img src="https://developers.cvent.com/cvent-logo.png" alt="Cvent" class="price-logo"><div class="price-amount" style="font-size:19px;margin-top:5px;color:var(--ev-muted)">Contact Sales</div><div class="price-note">Enterprise pricing, not listed publicly</div><div class="price-details"><span class="price-detail"><span class="dl">Setup:</span> Contact for pricing</span><span class="price-detail"><span class="dl">Transaction:</span> Contact for pricing</span></div></div>
+          </div>
+          <div class="feat-layout">
+            <div class="feat-col-categories">
+              <div class="feat-col-header">Features</div>
+              <div class="feat-cat-list">
+                <button class="feat-cat-btn active" data-cat="all">Select All Categories</button>
+                <button class="feat-cat-btn" data-cat="pricing">Pricing Transparency</button>
+                <button class="feat-cat-btn" data-cat="event-creation">Event Creation</button>
+                <button class="feat-cat-btn" data-cat="artist-vendor">Artist and Vendor</button>
+                <button class="feat-cat-btn" data-cat="volunteer">Volunteer</button>
+                <button class="feat-cat-btn" data-cat="ticketing">Ticketing</button>
+                <button class="feat-cat-btn" data-cat="support">Support</button>
+              </div>
+            </div>
+            <div class="feat-col-ev">
+              <div class="feat-col-header ev-header"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="eventeny" style="height:20px;filter:brightness(0) invert(1);object-fit:contain;"><span class="rec-chip" style="margin-left:8px;">Recommended</span></div>
+              <div class="feat-rows-wrap collapsible" id="cventEvRows">
+                <div class="feat-item" data-cat="pricing"><div class="feat-ico yes">✓</div><span>Publicly listed pricing</span></div>
+                <div class="feat-item" data-cat="pricing"><div class="feat-ico yes">✓</div><span>No setup fees</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico yes">✓</div><span>Unlimited events</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico yes">✓</div><span>In-person, hybrid and virtual</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico yes">✓</div><span>Interactive scheduling</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico yes">✓</div><span>Customized event mapping</span></div>
+                <div class="feat-item" data-cat="artist-vendor"><div class="feat-ico yes">✓</div><span>Vendor and artist management</span></div>
+                <div class="feat-item" data-cat="artist-vendor"><div class="feat-ico yes">✓</div><span>Unlimited applications</span></div>
+                <div class="feat-item" data-cat="artist-vendor"><div class="feat-ico yes">✓</div><span>Jury process built-in</span></div>
+                <div class="feat-item" data-cat="volunteer"><div class="feat-ico yes">✓</div><span>Volunteer management</span></div>
+                <div class="feat-item" data-cat="volunteer"><div class="feat-ico yes">✓</div><span>Custom shifts and departments</span></div>
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico yes">✓</div><span>Unlimited ticket types</span></div>
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico yes">✓</div><span>Touchless ticketing</span></div>
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico yes">✓</div><span>Hardware rental options</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico yes">✓</div><span>Dedicated customer success manager</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico yes">✓</div><span>Phone and email support</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico yes">✓</div><span>In-house development team</span></div>
+              </div>
+              <button class="feat-show-more-btn" id="cventEvShowMore" onclick="toggleFeatRows('cventEvRows','cventEvShowMore')">Show more</button>
+            </div>
+            <div class="feat-col-comp">
+              <div class="feat-col-header comp-header">CVENT</div>
+              <div class="feat-rows-wrap collapsible" id="cventCompRows">
+                <div class="feat-item" data-cat="pricing"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Publicly listed pricing</span></div>
+                <div class="feat-item" data-cat="pricing"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>No setup fees</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico yes"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Unlimited events</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico yes"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>In-person, hybrid and virtual</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico yes"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Interactive scheduling</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico part">~</div><span>Customized event mapping <span class="pill pill-amber" style="font-size:10px;">Extra fees</span></span></div>
+                <div class="feat-item" data-cat="artist-vendor"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Vendor and artist management</span></div>
+                <div class="feat-item" data-cat="artist-vendor"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Unlimited applications</span></div>
+                <div class="feat-item" data-cat="artist-vendor"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Jury process built-in</span></div>
+                <div class="feat-item" data-cat="volunteer"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Volunteer management</span></div>
+                <div class="feat-item" data-cat="volunteer"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Custom shifts and departments</span></div>
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico yes"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Unlimited ticket types</span></div>
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico yes"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Touchless ticketing</span></div>
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Hardware rental options</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico part">~</div><span>Customer success manager <span class="pill pill-amber" style="font-size:10px;">Enterprise only</span></span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Phone and email support</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>In-house development team</span></div>
+              </div>
+              <button class="feat-show-more-btn comp-show-more" id="cventCompShowMore" onclick="toggleFeatRows('cventCompRows','cventCompShowMore')">Show more</button>
+            </div>
+          </div>
+        </div>
+        <div class="quote-strip"><div class="q-mark">"</div><div><blockquote>Cvent was built for corporate conferences. We run a community festival with 300 vendors. Eventeny was the only platform that understood what we needed.</blockquote><cite>James T., Operations Lead — River City Food Festival</cite></div></div>
+        </div>
+      </div>
+
+      <!-- LEAP PANEL -->
+      <div class="comp-panel" id="panel-leap">
+        <div class="table-card-wrap">
+        <div class="table-card">
+          <div class="pricing-row">
+            <div class="price-block ev"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="Eventeny" class="price-logo"><div class="price-amount">$240<span style="font-size:15px;font-weight:400;opacity:.7">/mo</span></div><div class="price-note">Full event management. Flat monthly.</div><div class="price-details"><span class="price-detail"><span class="dl">Setup:</span> Free</span><span class="price-detail"><span class="dl">Transaction:</span> 3%</span></div><a href="https://www.eventeny.com/product/pricing/" class="price-block-cta">Start Free</a></div>
+            <div class="price-block"><img src="/assets/logos/leap.png" alt="Leap Conventions" class="price-logo"><div class="price-amount" style="font-size:19px;margin-top:5px;color:var(--ev-muted)">Contact Sales</div><div class="price-note">Convention-focused pricing</div><div class="price-details"><span class="price-detail"><span class="dl">Setup:</span> Contact for pricing</span></div></div>
+          </div>
+          <div class="feat-layout">
+            <div class="feat-col-categories">
+              <div class="feat-col-header">Features</div>
+              <div class="feat-cat-list">
+                <button class="feat-cat-btn active" data-cat="all">Select All Categories</button>
+                <button class="feat-cat-btn" data-cat="event-creation">Event Creation</button>
+                <button class="feat-cat-btn" data-cat="artist-vendor">Artist and Vendor</button>
+                <button class="feat-cat-btn" data-cat="volunteer">Volunteer</button>
+                <button class="feat-cat-btn" data-cat="ticketing">Ticketing</button>
+                <button class="feat-cat-btn" data-cat="support">Support</button>
+              </div>
+            </div>
+            <div class="feat-col-ev">
+              <div class="feat-col-header ev-header"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="eventeny" style="height:20px;filter:brightness(0) invert(1);object-fit:contain;"><span class="rec-chip" style="margin-left:8px;">Recommended</span></div>
+              <div class="feat-rows-wrap collapsible" id="leapEvRows">
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico yes">✓</div><span>Unlimited events</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico yes">✓</div><span>In-person, hybrid and virtual</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico yes">✓</div><span>Interactive scheduling</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico yes">✓</div><span>Customized event mapping</span></div>
+                <div class="feat-item" data-cat="artist-vendor"><div class="feat-ico yes">✓</div><span>Vendor and artist management</span></div>
+                <div class="feat-item" data-cat="artist-vendor"><div class="feat-ico yes">✓</div><span>Unlimited applications</span></div>
+                <div class="feat-item" data-cat="artist-vendor"><div class="feat-ico yes">✓</div><span>Custom application questions</span></div>
+                <div class="feat-item" data-cat="volunteer"><div class="feat-ico yes">✓</div><span>Volunteer management</span></div>
+                <div class="feat-item" data-cat="volunteer"><div class="feat-ico yes">✓</div><span>Custom shifts and departments</span></div>
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico yes">✓</div><span>Badge sales and registration</span></div>
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico yes">✓</div><span>Touchless ticketing</span></div>
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico yes">✓</div><span>Hardware rental options</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico yes">✓</div><span>Dedicated customer success manager</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico yes">✓</div><span>Phone and email support</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico yes">✓</div><span>Sponsor management</span></div>
+              </div>
+              <button class="feat-show-more-btn" id="leapEvShowMore" onclick="toggleFeatRows('leapEvRows','leapEvShowMore')">Show more</button>
+            </div>
+            <div class="feat-col-comp">
+              <div class="feat-col-header comp-header">LEAP CONVENTIONS</div>
+              <div class="feat-rows-wrap collapsible" id="leapCompRows">
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico yes"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Unlimited events</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>In-person, hybrid and virtual</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico yes"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Interactive scheduling</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Customized event mapping</span></div>
+                <div class="feat-item" data-cat="artist-vendor"><div class="feat-ico part">~</div><span>Vendor and artist management <span class="pill pill-amber" style="font-size:10px;">Limited</span></span></div>
+                <div class="feat-item" data-cat="artist-vendor"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Unlimited applications</span></div>
+                <div class="feat-item" data-cat="artist-vendor"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Custom application questions</span></div>
+                <div class="feat-item" data-cat="volunteer"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Volunteer management</span></div>
+                <div class="feat-item" data-cat="volunteer"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Custom shifts and departments</span></div>
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico yes"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Badge sales and registration</span></div>
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico yes"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Touchless ticketing</span></div>
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Hardware rental options</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Dedicated customer success manager</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Phone and email support</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Sponsor management</span></div>
+              </div>
+              <button class="feat-show-more-btn comp-show-more" id="leapCompShowMore" onclick="toggleFeatRows('leapCompRows','leapCompShowMore')">Show more</button>
+            </div>
+          </div>
+        </div>
+        <div class="quote-strip"><div class="q-mark">"</div><div><blockquote>Leap handled our badge sales fine. But when we needed vendors, volunteers, and floor maps in the same system, Eventeny was the only real option.</blockquote><cite>Marcus D., Convention Director — TechCon Midwest</cite></div></div>
+        </div>
+      </div>
+
+      <!-- ZAPPLICATION PANEL -->
+      <div class="comp-panel" id="panel-zapplication">
+        <div class="table-card-wrap">
+        <div class="table-card">
+          <div class="pricing-row">
+            <div class="price-block ev"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="Eventeny" class="price-logo"><div class="price-amount">$240<span style="font-size:15px;font-weight:400;opacity:.7">/mo</span></div><div class="price-note">Full platform. Applications included.</div><div class="price-details"><span class="price-detail"><span class="dl">Setup:</span> Free</span><span class="price-detail"><span class="dl">Per-app fees:</span> None</span></div><a href="https://www.eventeny.com/product/pricing/" class="price-block-cta">Start Free</a></div>
+            <div class="price-block"><img src="https://www.zapplication.org/images/ZAPP-Logo-artist.png" alt="Zapplication" class="price-logo"><div class="price-amount" style="color:var(--ev-body)">$2,700<span style="font-size:15px;font-weight:400">/yr</span></div><div class="price-note">Applications only. No ticketing.</div><div class="price-details"><span class="price-detail"><span class="dl">Setup:</span> $1,500</span><span class="price-detail"><span class="dl">Per-app:</span> From $1.99</span></div></div>
+          </div>
+          <div class="feat-layout">
+            <div class="feat-col-categories">
+              <div class="feat-col-header">Features</div>
+              <div class="feat-cat-list">
+                <button class="feat-cat-btn active" data-cat="all">Select All Categories</button>
+                <button class="feat-cat-btn" data-cat="applications">Applications</button>
+                <button class="feat-cat-btn" data-cat="event-creation">Event Creation</button>
+                <button class="feat-cat-btn" data-cat="volunteer">Volunteer</button>
+                <button class="feat-cat-btn" data-cat="ticketing">Ticketing</button>
+                <button class="feat-cat-btn" data-cat="support">Support</button>
+              </div>
+            </div>
+            <div class="feat-col-ev">
+              <div class="feat-col-header ev-header"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="eventeny" style="height:20px;filter:brightness(0) invert(1);object-fit:contain;"><span class="rec-chip" style="margin-left:8px;">Recommended</span></div>
+              <div class="feat-rows-wrap collapsible" id="zappEvRows">
+                <div class="feat-item" data-cat="applications"><div class="feat-ico yes">✓</div><span>Unlimited applications</span></div>
+                <div class="feat-item" data-cat="applications"><div class="feat-ico yes">✓</div><span>Custom application questions</span></div>
+                <div class="feat-item" data-cat="applications"><div class="feat-ico yes">✓</div><span>Jury process built-in</span></div>
+                <div class="feat-item" data-cat="applications"><div class="feat-ico yes">✓</div><span>Application listing</span></div>
+                <div class="feat-item" data-cat="applications"><div class="feat-ico yes">✓</div><span>Custom pricing and fee structure</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico yes">✓</div><span>Unlimited events</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico yes">✓</div><span>Customized event mapping</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico yes">✓</div><span>Interactive scheduling</span></div>
+                <div class="feat-item" data-cat="volunteer"><div class="feat-ico yes">✓</div><span>Volunteer management</span></div>
+                <div class="feat-item" data-cat="volunteer"><div class="feat-ico yes">✓</div><span>Custom shifts and departments</span></div>
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico yes">✓</div><span>Unlimited ticket types</span></div>
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico yes">✓</div><span>Touchless ticketing</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico yes">✓</div><span>Dedicated customer success manager</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico yes">✓</div><span>Phone and email support</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico yes">✓</div><span>In-house development team</span></div>
+              </div>
+              <button class="feat-show-more-btn" id="zappEvShowMore" onclick="toggleFeatRows('zappEvRows','zappEvShowMore')">Show more</button>
+            </div>
+            <div class="feat-col-comp">
+              <div class="feat-col-header comp-header">ZAPPLICATION</div>
+              <div class="feat-rows-wrap collapsible" id="zappCompRows">
+                <div class="feat-item" data-cat="applications"><div class="feat-ico part">~</div><span>Unlimited applications <span class="pill pill-amber" style="font-size:10px;">Per-app fees</span></span></div>
+                <div class="feat-item" data-cat="applications"><div class="feat-ico part">~</div><span>Custom application questions <span class="pill pill-amber" style="font-size:10px;">Contact support</span></span></div>
+                <div class="feat-item" data-cat="applications"><div class="feat-ico part">~</div><span>Jury process built-in <span class="pill pill-amber" style="font-size:10px;">Extra fees</span></span></div>
+                <div class="feat-item" data-cat="applications"><div class="feat-ico yes"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Application listing</span></div>
+                <div class="feat-item" data-cat="applications"><div class="feat-ico part">~</div><span>Custom pricing and fee structure <span class="pill pill-amber" style="font-size:10px;">Contact support</span></span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Unlimited events</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Customized event mapping</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Interactive scheduling</span></div>
+                <div class="feat-item" data-cat="volunteer"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Volunteer management</span></div>
+                <div class="feat-item" data-cat="volunteer"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Custom shifts and departments</span></div>
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Unlimited ticket types</span></div>
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Touchless ticketing</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Dedicated customer success manager</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Phone and email support</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>In-house development team</span></div>
+              </div>
+              <button class="feat-show-more-btn comp-show-more" id="zappCompShowMore" onclick="toggleFeatRows('zappCompRows','zappCompShowMore')">Show more</button>
+            </div>
+          </div>
+        </div>
+        <div class="quote-strip"><div class="q-mark">"</div><div><blockquote>We paid Zapplication $2,700 a year just for applications, then stitched together three other tools for everything else. Eventeny replaced all of them.</blockquote><cite>Lisa K., Director — Midwest Art Fair</cite></div></div>
+        </div>
+      </div>
+
+      <!-- BOOTHCENTRAL PANEL -->
+      <div class="comp-panel" id="panel-boothcentral">
+        <div class="table-card-wrap">
+        <div class="table-card">
+          <div class="pricing-row">
+            <div class="price-block ev"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="Eventeny" class="price-logo"><div class="price-amount">$240<span style="font-size:15px;font-weight:400;opacity:.7">/mo</span></div><div class="price-note">Flat monthly. Full booth management included.</div><div class="price-details"><span class="price-detail"><span class="dl">Setup:</span> Free</span><span class="price-detail"><span class="dl">Transaction:</span> 3%</span></div><a href="https://www.eventeny.com/product/pricing/" class="price-block-cta">Start Free</a></div>
+            <div class="price-block"><img src="https://boothcentral.com/wp-content/uploads/2019/03/logo_horizantal_gradient-e1553528157823.png" alt="BoothCentral" class="price-logo"><div class="price-amount" style="color:var(--ev-body)">$495<span style="font-size:15px;font-weight:400">/event</span></div><div class="price-note">Per-event pricing. Adds up fast.</div><div class="price-details"><span class="price-detail"><span class="dl">Setup:</span> Free</span><span class="price-detail"><span class="dl">Transaction:</span> Starting at $5/application</span></div></div>
+          </div>
+          <div class="feat-layout">
+            <div class="feat-col-categories">
+              <div class="feat-col-header">Features</div>
+              <div class="feat-cat-list">
+                <button class="feat-cat-btn active" data-cat="all">Select All Categories</button>
+                <button class="feat-cat-btn" data-cat="booth">Booth Management</button>
+                <button class="feat-cat-btn" data-cat="event-creation">Event Creation</button>
+                <button class="feat-cat-btn" data-cat="artist-vendor">Artist and Vendor</button>
+                <button class="feat-cat-btn" data-cat="volunteer">Volunteer</button>
+                <button class="feat-cat-btn" data-cat="ticketing">Ticketing</button>
+                <button class="feat-cat-btn" data-cat="support">Support</button>
+              </div>
+            </div>
+            <div class="feat-col-ev">
+              <div class="feat-col-header ev-header"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="eventeny" style="height:20px;filter:brightness(0) invert(1);object-fit:contain;"><span class="rec-chip" style="margin-left:8px;">Recommended</span></div>
+              <div class="feat-rows-wrap collapsible" id="boothEvRows">
+                <div class="feat-item" data-cat="booth"><div class="feat-ico yes">✓</div><span>Occupied booth tracking</span></div>
+                <div class="feat-item" data-cat="booth"><div class="feat-ico yes">✓</div><span>Interactive floor map</span></div>
+                <div class="feat-item" data-cat="booth"><div class="feat-ico yes">✓</div><span>Custom pricing per booth</span></div>
+                <div class="feat-item" data-cat="booth"><div class="feat-ico yes">✓</div><span>Booth assignment</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico yes">✓</div><span>Unlimited events</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico yes">✓</div><span>Customized event mapping</span></div>
+                <div class="feat-item" data-cat="artist-vendor"><div class="feat-ico yes">✓</div><span>Vendor and artist management</span></div>
+                <div class="feat-item" data-cat="artist-vendor"><div class="feat-ico yes">✓</div><span>Unlimited applications</span></div>
+                <div class="feat-item" data-cat="artist-vendor"><div class="feat-ico yes">✓</div><span>Custom application questions</span></div>
+                <div class="feat-item" data-cat="volunteer"><div class="feat-ico yes">✓</div><span>Volunteer management</span></div>
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico yes">✓</div><span>Unlimited ticket types</span></div>
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico yes">✓</div><span>Touchless ticketing</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico yes">✓</div><span>Dedicated customer success manager</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico yes">✓</div><span>Phone and email support</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico yes">✓</div><span>Sponsor management</span></div>
+              </div>
+              <button class="feat-show-more-btn" id="boothEvShowMore" onclick="toggleFeatRows('boothEvRows','boothEvShowMore')">Show more</button>
+            </div>
+            <div class="feat-col-comp">
+              <div class="feat-col-header comp-header">BOOTHCENTRAL</div>
+              <div class="feat-rows-wrap collapsible" id="boothCompRows">
+                <div class="feat-item" data-cat="booth"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Occupied booth tracking <span class="pill pill-red" style="font-size:10px;">No tracking</span></span></div>
+                <div class="feat-item" data-cat="booth"><div class="feat-ico yes"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Interactive floor map</span></div>
+                <div class="feat-item" data-cat="booth"><div class="feat-ico part">~</div><span>Custom pricing per booth <span class="pill pill-amber" style="font-size:10px;">Contact support</span></span></div>
+                <div class="feat-item" data-cat="booth"><div class="feat-ico yes"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Booth assignment</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Unlimited events</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Customized event mapping</span></div>
+                <div class="feat-item" data-cat="artist-vendor"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Vendor and artist management</span></div>
+                <div class="feat-item" data-cat="artist-vendor"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Unlimited applications</span></div>
+                <div class="feat-item" data-cat="artist-vendor"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Custom application questions</span></div>
+                <div class="feat-item" data-cat="volunteer"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Volunteer management</span></div>
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Unlimited ticket types</span></div>
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Touchless ticketing</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Dedicated customer success manager</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Phone and email support</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Sponsor management</span></div>
+              </div>
+              <button class="feat-show-more-btn comp-show-more" id="boothCompShowMore" onclick="toggleFeatRows('boothCompRows','boothCompShowMore')">Show more</button>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <!-- TICKETSPICE PANEL -->
+      <div class="comp-panel" id="panel-ticketspice">
+        <div class="table-card-wrap">
+        <div class="table-card">
+          <div class="pricing-row">
+            <div class="price-block ev"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="Eventeny" class="price-logo"><div class="price-amount">$240<span style="font-size:15px;font-weight:400;opacity:.7">/mo</span></div><div class="price-note">Plus 3% transaction. Everything included.</div><div class="price-details"><span class="price-detail"><span class="dl">Setup:</span> Free</span><span class="price-detail"><span class="dl">Transaction:</span> 3%</span></div><a href="https://www.eventeny.com/product/pricing/" class="price-block-cta">Start Free</a></div>
+            <div class="price-block"><img src="https://cdn.uploads.webconnex.com/9/1609895824833-TicketSpice.png?1678751010048" alt="TicketSpice" class="price-logo"><div class="price-amount" style="color:var(--ev-body)">$0.99<span style="font-size:15px;font-weight:400">/attendee</span></div><div class="price-note">Plus 2.9% + $0.30 per transaction</div><div class="price-details"><span class="price-detail"><span class="dl">Setup:</span> Free</span></div></div>
+          </div>
+          <div class="feat-layout">
+            <div class="feat-col-categories">
+              <div class="feat-col-header">Features</div>
+              <div class="feat-cat-list">
+                <button class="feat-cat-btn active" data-cat="all">Select All Categories</button>
+                <button class="feat-cat-btn" data-cat="ticketing">Ticketing</button>
+                <button class="feat-cat-btn" data-cat="event-creation">Event Creation</button>
+                <button class="feat-cat-btn" data-cat="artist-vendor">Artist and Vendor</button>
+                <button class="feat-cat-btn" data-cat="volunteer">Volunteer</button>
+                <button class="feat-cat-btn" data-cat="support">Support</button>
+              </div>
+            </div>
+            <div class="feat-col-ev">
+              <div class="feat-col-header ev-header"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="eventeny" style="height:20px;filter:brightness(0) invert(1);object-fit:contain;"><span class="rec-chip" style="margin-left:8px;">Recommended</span></div>
+              <div class="feat-rows-wrap collapsible" id="tsEvRows">
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico yes">✓</div><span>Unlimited ticket types</span></div>
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico yes">✓</div><span>Touchless ticketing</span></div>
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico yes">✓</div><span>Donation and fundraising</span></div>
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico yes">✓</div><span>Hardware rental options</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico yes">✓</div><span>Unlimited events</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico yes">✓</div><span>Customized event mapping</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico yes">✓</div><span>Interactive scheduling</span></div>
+                <div class="feat-item" data-cat="artist-vendor"><div class="feat-ico yes">✓</div><span>Vendor and artist management</span></div>
+                <div class="feat-item" data-cat="artist-vendor"><div class="feat-ico yes">✓</div><span>Unlimited applications</span></div>
+                <div class="feat-item" data-cat="volunteer"><div class="feat-ico yes">✓</div><span>Volunteer management</span></div>
+                <div class="feat-item" data-cat="volunteer"><div class="feat-ico yes">✓</div><span>Custom shifts and departments</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico yes">✓</div><span>Dedicated customer success manager</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico yes">✓</div><span>Phone and email support</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico yes">✓</div><span>In-house development team</span></div>
+              </div>
+              <button class="feat-show-more-btn" id="tsEvShowMore" onclick="toggleFeatRows('tsEvRows','tsEvShowMore')">Show more</button>
+            </div>
+            <div class="feat-col-comp">
+              <div class="feat-col-header comp-header">TICKETSPICE</div>
+              <div class="feat-rows-wrap collapsible" id="tsCompRows">
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico yes"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Unlimited ticket types</span></div>
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico yes"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Touchless ticketing</span></div>
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico yes"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Donation and fundraising</span></div>
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Hardware rental options</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Unlimited events</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Customized event mapping</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Interactive scheduling</span></div>
+                <div class="feat-item" data-cat="artist-vendor"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Vendor and artist management</span></div>
+                <div class="feat-item" data-cat="artist-vendor"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Unlimited applications</span></div>
+                <div class="feat-item" data-cat="volunteer"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Volunteer management</span></div>
+                <div class="feat-item" data-cat="volunteer"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Custom shifts and departments</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Dedicated customer success manager</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Phone and email support</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>In-house development team</span></div>
+              </div>
+              <button class="feat-show-more-btn comp-show-more" id="tsCompShowMore" onclick="toggleFeatRows('tsCompRows','tsCompShowMore')">Show more</button>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <!-- TIXR PANEL -->
+      <div class="comp-panel" id="panel-tixr">
+        <div class="table-card-wrap">
+        <div class="table-card">
+          <div class="pricing-row">
+            <div class="price-block ev"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="Eventeny" class="price-logo"><div class="price-amount">$240<span style="font-size:15px;font-weight:400;opacity:.7">/mo</span></div><div class="price-note">Transparent and flat. No surprises.</div><div class="price-details"><span class="price-detail"><span class="dl">Setup:</span> Free</span><span class="price-detail"><span class="dl">Transaction:</span> 3%</span></div><a href="https://www.eventeny.com/product/pricing/" class="price-block-cta">Start Free</a></div>
+            <div class="price-block"><img src="https://www.sanfordinternational.com/wp-content/uploads/2024/07/Tixr-Black-Logomark_Transparent-Background@2x-e1724264423700.png" alt="Tixr" class="price-logo"><div class="price-amount" style="font-size:19px;margin-top:5px;color:var(--ev-muted)">~10% reported</div><div class="price-note">Contact sales for actual pricing</div><div class="price-details"><span class="price-detail"><span class="dl">Setup:</span> Contact sales</span></div></div>
+          </div>
+          <div class="feat-layout">
+            <div class="feat-col-categories">
+              <div class="feat-col-header">Features</div>
+              <div class="feat-cat-list">
+                <button class="feat-cat-btn active" data-cat="all">Select All Categories</button>
+                <button class="feat-cat-btn" data-cat="ticketing">Ticketing</button>
+                <button class="feat-cat-btn" data-cat="event-creation">Event Creation</button>
+                <button class="feat-cat-btn" data-cat="artist-vendor">Artist and Vendor</button>
+                <button class="feat-cat-btn" data-cat="volunteer">Volunteer</button>
+                <button class="feat-cat-btn" data-cat="support">Support</button>
+              </div>
+            </div>
+            <div class="feat-col-ev">
+              <div class="feat-col-header ev-header"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="eventeny" style="height:20px;filter:brightness(0) invert(1);object-fit:contain;"><span class="rec-chip" style="margin-left:8px;">Recommended</span></div>
+              <div class="feat-rows-wrap collapsible" id="tixrEvRows">
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico yes">✓</div><span>Unlimited ticket types</span></div>
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico yes">✓</div><span>Touchless ticketing</span></div>
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico yes">✓</div><span>Hardware rental options</span></div>
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico yes">✓</div><span>Attendee registration</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico yes">✓</div><span>Unlimited events</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico yes">✓</div><span>Customized event mapping</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico yes">✓</div><span>Interactive scheduling</span></div>
+                <div class="feat-item" data-cat="artist-vendor"><div class="feat-ico yes">✓</div><span>Vendor and exhibitor management</span></div>
+                <div class="feat-item" data-cat="artist-vendor"><div class="feat-ico yes">✓</div><span>Unlimited applications</span></div>
+                <div class="feat-item" data-cat="volunteer"><div class="feat-ico yes">✓</div><span>Volunteer management</span></div>
+                <div class="feat-item" data-cat="volunteer"><div class="feat-ico yes">✓</div><span>Custom shifts and departments</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico yes">✓</div><span>Dedicated customer success manager</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico yes">✓</div><span>Phone and email support</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico yes">✓</div><span>In-house development team</span></div>
+              </div>
+              <button class="feat-show-more-btn" id="tixrEvShowMore" onclick="toggleFeatRows('tixrEvRows','tixrEvShowMore')">Show more</button>
+            </div>
+            <div class="feat-col-comp">
+              <div class="feat-col-header comp-header">TIXR</div>
+              <div class="feat-rows-wrap collapsible" id="tixrCompRows">
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico yes"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Unlimited ticket types</span></div>
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico yes"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Touchless ticketing</span></div>
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Hardware rental options</span></div>
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico yes"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Attendee registration</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Unlimited events</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Customized event mapping</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Interactive scheduling</span></div>
+                <div class="feat-item" data-cat="artist-vendor"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Vendor and exhibitor management</span></div>
+                <div class="feat-item" data-cat="artist-vendor"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Unlimited applications</span></div>
+                <div class="feat-item" data-cat="volunteer"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Volunteer management</span></div>
+                <div class="feat-item" data-cat="volunteer"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Custom shifts and departments</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Dedicated customer success manager</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Phone and email support</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>In-house development team</span></div>
+              </div>
+              <button class="feat-show-more-btn comp-show-more" id="tixrCompShowMore" onclick="toggleFeatRows('tixrCompRows','tixrCompShowMore')">Show more</button>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+
+    </div><!-- /hub-table-area -->
+
+      <!-- ONEPLAN PANEL -->
+      <div class="comp-panel" id="panel-oneplan">
+        <div class="table-card-wrap">
+        <div class="table-card">
+          <div class="pricing-row">
+            <div class="price-block ev"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="Eventeny" class="price-logo"><div class="price-amount">$240<span style="font-size:15px;font-weight:400;opacity:.7">/mo</span></div><div class="price-note">Full event management. Flat monthly.</div><div class="price-details"><span class="price-detail"><span class="dl">Setup:</span> Free</span><span class="price-detail"><span class="dl">Transaction:</span> 3%</span></div><a href="https://www.eventeny.com/product/pricing/" class="price-block-cta">Start Free</a></div>
+            <div class="price-block"><img src="/assets/logos/oneplan.png" alt="One Plan" class="price-logo"><div class="price-amount" style="font-size:19px;margin-top:5px;color:var(--ev-muted)">$690</div><div class="price-note">Mapping and site design only</div><div class="price-details"><span class="price-detail"><span class="dl">Setup:</span> Contact for pricing</span></div></div>
+          </div>
+          <div class="feat-layout">
+            <div class="feat-col-categories">
+              <div class="feat-col-header">Features</div>
+              <div class="feat-cat-list">
+                <button class="feat-cat-btn active" data-cat="all">Select All Categories</button>
+                <button class="feat-cat-btn" data-cat="mapping">Mapping</button>
+                <button class="feat-cat-btn" data-cat="event-creation">Event Creation</button>
+                <button class="feat-cat-btn" data-cat="artist-vendor">Artist and Vendor</button>
+                <button class="feat-cat-btn" data-cat="volunteer">Volunteer</button>
+                <button class="feat-cat-btn" data-cat="ticketing">Ticketing</button>
+                <button class="feat-cat-btn" data-cat="support">Support</button>
+              </div>
+            </div>
+            <div class="feat-col-ev">
+              <div class="feat-col-header ev-header"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="eventeny" style="height:20px;filter:brightness(0) invert(1);object-fit:contain;"><span class="rec-chip" style="margin-left:8px;">Recommended</span></div>
+              <div class="feat-rows-wrap collapsible" id="oneplanEvRows">
+                <div class="feat-item" data-cat="mapping"><div class="feat-ico yes">✓</div><span>Customized event mapping</span></div>
+                <div class="feat-item" data-cat="mapping"><div class="feat-ico yes">✓</div><span>Interactive floor plans</span></div>
+                <div class="feat-item" data-cat="mapping"><div class="feat-ico yes">✓</div><span>Booth assignment</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico yes">✓</div><span>Unlimited events</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico yes">✓</div><span>Interactive scheduling</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico yes">✓</div><span>In-person, hybrid and virtual</span></div>
+                <div class="feat-item" data-cat="artist-vendor"><div class="feat-ico yes">✓</div><span>Vendor and artist management</span></div>
+                <div class="feat-item" data-cat="artist-vendor"><div class="feat-ico yes">✓</div><span>Unlimited applications</span></div>
+                <div class="feat-item" data-cat="volunteer"><div class="feat-ico yes">✓</div><span>Volunteer management</span></div>
+                <div class="feat-item" data-cat="volunteer"><div class="feat-ico yes">✓</div><span>Custom shifts and departments</span></div>
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico yes">✓</div><span>Unlimited ticket types</span></div>
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico yes">✓</div><span>Touchless ticketing</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico yes">✓</div><span>Dedicated customer success manager</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico yes">✓</div><span>Phone and email support</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico yes">✓</div><span>In-house development team</span></div>
+              </div>
+              <button class="feat-show-more-btn" id="oneplanEvShowMore" onclick="toggleFeatRows('oneplanEvRows','oneplanEvShowMore')">Show more</button>
+            </div>
+            <div class="feat-col-comp">
+              <div class="feat-col-header comp-header">ONEPLAN</div>
+              <div class="feat-rows-wrap collapsible" id="oneplanCompRows">
+                <div class="feat-item" data-cat="mapping"><div class="feat-ico yes"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Customized event mapping</span></div>
+                <div class="feat-item" data-cat="mapping"><div class="feat-ico yes"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Interactive floor plans</span></div>
+                <div class="feat-item" data-cat="mapping"><div class="feat-ico yes"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Booth assignment</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Unlimited events</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Interactive scheduling</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>In-person, hybrid and virtual</span></div>
+                <div class="feat-item" data-cat="artist-vendor"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Vendor and artist management</span></div>
+                <div class="feat-item" data-cat="artist-vendor"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Unlimited applications</span></div>
+                <div class="feat-item" data-cat="volunteer"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Volunteer management</span></div>
+                <div class="feat-item" data-cat="volunteer"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Custom shifts and departments</span></div>
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Unlimited ticket types</span></div>
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Touchless ticketing</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Dedicated customer success manager</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Phone and email support</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>In-house development team</span></div>
+              </div>
+              <button class="feat-show-more-btn comp-show-more" id="oneplanCompShowMore" onclick="toggleFeatRows('oneplanCompRows','oneplanCompShowMore')">Show more</button>
+            </div>
+          </div>
+        </div>
+        <div class="quote-strip"><div class="q-mark">"</div><div><blockquote>OnePlan helped us design the site layout, but we still needed three other tools to run the actual event. Eventeny does it all in one place.</blockquote><cite>Rachel M., Event Director — Lakefront Summer Fest</cite></div></div>
+        </div>
+      </div>
+
+      <!-- EXPOFP PANEL -->
+      <div class="comp-panel" id="panel-expofp">
+        <div class="table-card-wrap">
+        <div class="table-card">
+          <div class="pricing-row">
+            <div class="price-block ev"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="Eventeny" class="price-logo"><div class="price-amount">$240<span style="font-size:15px;font-weight:400;opacity:.7">/mo</span></div><div class="price-note">Full event management. Flat monthly.</div><div class="price-details"><span class="price-detail"><span class="dl">Setup:</span> Free</span><span class="price-detail"><span class="dl">Transaction:</span> 3%</span></div><a href="https://www.eventeny.com/product/pricing/" class="price-block-cta">Start Free</a></div>
+            <div class="price-block"><img src="/assets/logos/expofp.png" alt="ExpoFP" class="price-logo"><div class="price-amount" style="font-size:19px;margin-top:5px;color:var(--ev-muted)">Varies</div><div class="price-note">Floor plan tools only. No ticketing.</div><div class="price-details"><span class="price-detail"><span class="dl">Setup:</span> Contact for pricing</span></div></div>
+          </div>
+          <div class="feat-layout">
+            <div class="feat-col-categories">
+              <div class="feat-col-header">Features</div>
+              <div class="feat-cat-list">
+                <button class="feat-cat-btn active" data-cat="all">Select All Categories</button>
+                <button class="feat-cat-btn" data-cat="mapping">Floor Plans</button>
+                <button class="feat-cat-btn" data-cat="event-creation">Event Creation</button>
+                <button class="feat-cat-btn" data-cat="artist-vendor">Artist and Vendor</button>
+                <button class="feat-cat-btn" data-cat="volunteer">Volunteer</button>
+                <button class="feat-cat-btn" data-cat="ticketing">Ticketing</button>
+                <button class="feat-cat-btn" data-cat="support">Support</button>
+              </div>
+            </div>
+            <div class="feat-col-ev">
+              <div class="feat-col-header ev-header"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="eventeny" style="height:20px;filter:brightness(0) invert(1);object-fit:contain;"><span class="rec-chip" style="margin-left:8px;">Recommended</span></div>
+              <div class="feat-rows-wrap collapsible" id="expofpEvRows">
+                <div class="feat-item" data-cat="mapping"><div class="feat-ico yes">✓</div><span>Interactive floor plans</span></div>
+                <div class="feat-item" data-cat="mapping"><div class="feat-ico yes">✓</div><span>Customized event mapping</span></div>
+                <div class="feat-item" data-cat="mapping"><div class="feat-ico yes">✓</div><span>Booth assignment and tracking</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico yes">✓</div><span>Unlimited events</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico yes">✓</div><span>Interactive scheduling</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico yes">✓</div><span>In-person, hybrid and virtual</span></div>
+                <div class="feat-item" data-cat="artist-vendor"><div class="feat-ico yes">✓</div><span>Vendor and artist management</span></div>
+                <div class="feat-item" data-cat="artist-vendor"><div class="feat-ico yes">✓</div><span>Unlimited applications</span></div>
+                <div class="feat-item" data-cat="volunteer"><div class="feat-ico yes">✓</div><span>Volunteer management</span></div>
+                <div class="feat-item" data-cat="volunteer"><div class="feat-ico yes">✓</div><span>Custom shifts and departments</span></div>
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico yes">✓</div><span>Unlimited ticket types</span></div>
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico yes">✓</div><span>Touchless ticketing</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico yes">✓</div><span>Dedicated customer success manager</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico yes">✓</div><span>Phone and email support</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico yes">✓</div><span>In-house development team</span></div>
+              </div>
+              <button class="feat-show-more-btn" id="expofpEvShowMore" onclick="toggleFeatRows('expofpEvRows','expofpEvShowMore')">Show more</button>
+            </div>
+            <div class="feat-col-comp">
+              <div class="feat-col-header comp-header">EXPOFP</div>
+              <div class="feat-rows-wrap collapsible" id="expofpCompRows">
+                <div class="feat-item" data-cat="mapping"><div class="feat-ico yes"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Interactive floor plans</span></div>
+                <div class="feat-item" data-cat="mapping"><div class="feat-ico yes"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Customized event mapping</span></div>
+                <div class="feat-item" data-cat="mapping"><div class="feat-ico yes"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Booth assignment and tracking</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Unlimited events</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Interactive scheduling</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>In-person, hybrid and virtual</span></div>
+                <div class="feat-item" data-cat="artist-vendor"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Vendor and artist management</span></div>
+                <div class="feat-item" data-cat="artist-vendor"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Unlimited applications</span></div>
+                <div class="feat-item" data-cat="volunteer"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Volunteer management</span></div>
+                <div class="feat-item" data-cat="volunteer"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Custom shifts and departments</span></div>
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Unlimited ticket types</span></div>
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Touchless ticketing</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Dedicated customer success manager</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Phone and email support</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>In-house development team</span></div>
+              </div>
+              <button class="feat-show-more-btn comp-show-more" id="expofpCompShowMore" onclick="toggleFeatRows('expofpCompRows','expofpCompShowMore')">Show more</button>
+            </div>
+          </div>
+        </div>
+        <div class="quote-strip"><div class="q-mark">"</div><div><blockquote>ExpoFP gave us a great floor map but we still needed separate tools for applications, ticketing, and volunteers. Eventeny replaced the whole stack.</blockquote><cite>Dana P., Show Manager — Tri-State Craft Expo</cite></div></div>
+        </div>
+      </div>
+
+      <!-- MANAGE MY MARKET PANEL -->
+      <div class="comp-panel" id="panel-managemymarket">
+        <div class="table-card-wrap">
+        <div class="table-card">
+          <div class="pricing-row">
+            <div class="price-block ev"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="Eventeny" class="price-logo"><div class="price-amount">$240<span style="font-size:15px;font-weight:400;opacity:.7">/mo</span></div><div class="price-note">Full platform. Applications included.</div><div class="price-details"><span class="price-detail"><span class="dl">Setup:</span> Free</span><span class="price-detail"><span class="dl">Per-app fees:</span> None</span></div><a href="https://www.eventeny.com/product/pricing/" class="price-block-cta">Start Free</a></div>
+            <div class="price-block"><img src="/assets/logos/mmm.png" alt="ManageMyMarket" class="price-logo"><div class="price-amount" style="font-size:19px;margin-top:5px;color:var(--ev-muted)">Contact Sales</div><div class="price-note">Market vendor tools. No ticketing.</div><div class="price-details"><span class="price-detail"><span class="dl">App fees:</span> Reset each year</span></div></div>
+          </div>
+          <div class="feat-layout">
+            <div class="feat-col-categories">
+              <div class="feat-col-header">Features</div>
+              <div class="feat-cat-list">
+                <button class="feat-cat-btn active" data-cat="all">Select All Categories</button>
+                <button class="feat-cat-btn" data-cat="applications">Applications</button>
+                <button class="feat-cat-btn" data-cat="event-creation">Event Creation</button>
+                <button class="feat-cat-btn" data-cat="volunteer">Volunteer</button>
+                <button class="feat-cat-btn" data-cat="ticketing">Ticketing</button>
+                <button class="feat-cat-btn" data-cat="support">Support</button>
+              </div>
+            </div>
+            <div class="feat-col-ev">
+              <div class="feat-col-header ev-header"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="eventeny" style="height:20px;filter:brightness(0) invert(1);object-fit:contain;"><span class="rec-chip" style="margin-left:8px;">Recommended</span></div>
+              <div class="feat-rows-wrap collapsible" id="mmmEvRows">
+                <div class="feat-item" data-cat="applications"><div class="feat-ico yes">✓</div><span>Unlimited vendor applications</span></div>
+                <div class="feat-item" data-cat="applications"><div class="feat-ico yes">✓</div><span>Custom application questions</span></div>
+                <div class="feat-item" data-cat="applications"><div class="feat-ico yes">✓</div><span>Application listing</span></div>
+                <div class="feat-item" data-cat="applications"><div class="feat-ico yes">✓</div><span>Jury process built-in</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico yes">✓</div><span>Unlimited events</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico yes">✓</div><span>Customized event mapping</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico yes">✓</div><span>Interactive scheduling</span></div>
+                <div class="feat-item" data-cat="volunteer"><div class="feat-ico yes">✓</div><span>Volunteer management</span></div>
+                <div class="feat-item" data-cat="volunteer"><div class="feat-ico yes">✓</div><span>Custom shifts and departments</span></div>
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico yes">✓</div><span>Unlimited ticket types</span></div>
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico yes">✓</div><span>Touchless ticketing</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico yes">✓</div><span>Dedicated customer success manager</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico yes">✓</div><span>Phone and email support</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico yes">✓</div><span>In-house development team</span></div>
+              </div>
+              <button class="feat-show-more-btn" id="mmmEvShowMore" onclick="toggleFeatRows('mmmEvRows','mmmEvShowMore')">Show more</button>
+            </div>
+            <div class="feat-col-comp">
+              <div class="feat-col-header comp-header">MANAGE MY MARKET</div>
+              <div class="feat-rows-wrap collapsible" id="mmmCompRows">
+                <div class="feat-item" data-cat="applications"><div class="feat-ico yes"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Unlimited vendor applications</span></div>
+                <div class="feat-item" data-cat="applications"><div class="feat-ico yes"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Custom application questions</span></div>
+                <div class="feat-item" data-cat="applications"><div class="feat-ico yes"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Application listing</span></div>
+                <div class="feat-item" data-cat="applications"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Jury process built-in</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico part">~</div><span>Unlimited events <span class="pill pill-amber" style="font-size:10px;">App fees reset yearly</span></span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Customized event mapping</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Interactive scheduling</span></div>
+                <div class="feat-item" data-cat="volunteer"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Volunteer management</span></div>
+                <div class="feat-item" data-cat="volunteer"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Custom shifts and departments</span></div>
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Unlimited ticket types</span></div>
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Touchless ticketing</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Dedicated customer success manager</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Phone and email support</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>In-house development team</span></div>
+              </div>
+              <button class="feat-show-more-btn comp-show-more" id="mmmCompShowMore" onclick="toggleFeatRows('mmmCompRows','mmmCompShowMore')">Show more</button>
+            </div>
+          </div>
+        </div>
+        <div class="quote-strip"><div class="q-mark">"</div><div><blockquote>Manage My Market handled our vendor sign-ups but when we wanted ticketing and maps, we had to switch. With Eventeny we run the whole market from one dashboard.</blockquote><cite>Tara J., Market Manager — Riverside Weekend Market</cite></div></div>
+        </div>
+      </div>
+
+      <!-- JOTFORM PANEL -->
+      <div class="comp-panel" id="panel-jotform">
+        <div class="table-card-wrap">
+        <div class="table-card">
+          <div class="pricing-row">
+            <div class="price-block ev"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="Eventeny" class="price-logo"><div class="price-amount">$240<span style="font-size:15px;font-weight:400;opacity:.7">/mo</span></div><div class="price-note">Purpose-built for events. Everything included.</div><div class="price-details"><span class="price-detail"><span class="dl">Setup:</span> Free</span><span class="price-detail"><span class="dl">Transaction:</span> 3%</span></div><a href="https://www.eventeny.com/product/pricing/" class="price-block-cta">Start Free</a></div>
+            <div class="price-block"><img src="/assets/logos/Jotform.png" alt="JotForm" class="price-logo"><div class="price-amount" style="font-size:19px;margin-top:5px;color:var(--ev-muted)">Free / $34+/mo</div><div class="price-note">Generic form builder. No event tools.</div></div>
+          </div>
+          <div class="feat-layout">
+            <div class="feat-col-categories">
+              <div class="feat-col-header">Features</div>
+              <div class="feat-cat-list">
+                <button class="feat-cat-btn active" data-cat="all">Select All Categories</button>
+                <button class="feat-cat-btn" data-cat="forms">Forms</button>
+                <button class="feat-cat-btn" data-cat="event-creation">Event Creation</button>
+                <button class="feat-cat-btn" data-cat="artist-vendor">Artist and Vendor</button>
+                <button class="feat-cat-btn" data-cat="volunteer">Volunteer</button>
+                <button class="feat-cat-btn" data-cat="ticketing">Ticketing</button>
+                <button class="feat-cat-btn" data-cat="support">Support</button>
+              </div>
+            </div>
+            <div class="feat-col-ev">
+              <div class="feat-col-header ev-header"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="eventeny" style="height:20px;filter:brightness(0) invert(1);object-fit:contain;"><span class="rec-chip" style="margin-left:8px;">Recommended</span></div>
+              <div class="feat-rows-wrap collapsible" id="jotformEvRows">
+                <div class="feat-item" data-cat="forms"><div class="feat-ico yes">✓</div><span>Custom application questions</span></div>
+                <div class="feat-item" data-cat="forms"><div class="feat-ico yes">✓</div><span>Unlimited applications</span></div>
+                <div class="feat-item" data-cat="forms"><div class="feat-ico yes">✓</div><span>Application listing</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico yes">✓</div><span>Unlimited events</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico yes">✓</div><span>Customized event mapping</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico yes">✓</div><span>Interactive scheduling</span></div>
+                <div class="feat-item" data-cat="artist-vendor"><div class="feat-ico yes">✓</div><span>Vendor and artist management</span></div>
+                <div class="feat-item" data-cat="artist-vendor"><div class="feat-ico yes">✓</div><span>Jury process built-in</span></div>
+                <div class="feat-item" data-cat="volunteer"><div class="feat-ico yes">✓</div><span>Volunteer management</span></div>
+                <div class="feat-item" data-cat="volunteer"><div class="feat-ico yes">✓</div><span>Custom shifts and departments</span></div>
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico yes">✓</div><span>Unlimited ticket types</span></div>
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico yes">✓</div><span>Touchless ticketing</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico yes">✓</div><span>Dedicated customer success manager</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico yes">✓</div><span>Phone and email support</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico yes">✓</div><span>In-house development team</span></div>
+              </div>
+              <button class="feat-show-more-btn" id="jotformEvShowMore" onclick="toggleFeatRows('jotformEvRows','jotformEvShowMore')">Show more</button>
+            </div>
+            <div class="feat-col-comp">
+              <div class="feat-col-header comp-header">JOTFORM</div>
+              <div class="feat-rows-wrap collapsible" id="jotformCompRows">
+                <div class="feat-item" data-cat="forms"><div class="feat-ico yes"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Custom application questions</span></div>
+                <div class="feat-item" data-cat="forms"><div class="feat-ico yes"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Unlimited applications</span></div>
+                <div class="feat-item" data-cat="forms"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Application listing</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Unlimited events</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Customized event mapping</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Interactive scheduling</span></div>
+                <div class="feat-item" data-cat="artist-vendor"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Vendor and artist management</span></div>
+                <div class="feat-item" data-cat="artist-vendor"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Jury process built-in</span></div>
+                <div class="feat-item" data-cat="volunteer"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Volunteer management</span></div>
+                <div class="feat-item" data-cat="volunteer"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Custom shifts and departments</span></div>
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Unlimited ticket types</span></div>
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Touchless ticketing</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Dedicated customer success manager</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Phone and email support</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>In-house development team</span></div>
+              </div>
+              <button class="feat-show-more-btn comp-show-more" id="jotformCompShowMore" onclick="toggleFeatRows('jotformCompRows','jotformCompShowMore')">Show more</button>
+            </div>
+          </div>
+        </div>
+        <div class="quote-strip"><div class="q-mark">"</div><div><blockquote>We started with Jotform for vendor sign-ups. It worked until we needed payment collection, booth tracking, and ticket sales — then we found Eventeny.</blockquote><cite>Chris W., Festival Coordinator — Blue Ridge Folk Festival</cite></div></div>
+        </div>
+      </div>
+
+      <!-- GOOGLE FORMS PANEL -->
+      <div class="comp-panel" id="panel-googleforms">
+        <div class="table-card-wrap">
+        <div class="table-card">
+          <div class="pricing-row">
+            <div class="price-block ev"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="Eventeny" class="price-logo"><div class="price-amount">$240<span style="font-size:15px;font-weight:400;opacity:.7">/mo</span></div><div class="price-note">Purpose-built for events. Everything included.</div><div class="price-details"><span class="price-detail"><span class="dl">Setup:</span> Free</span><span class="price-detail"><span class="dl">Transaction:</span> 3%</span></div><a href="https://www.eventeny.com/product/pricing/" class="price-block-cta">Start Free</a></div>
+            <div class="price-block"><img src="/assets/logos/googleforms.png" alt="Google Forms" class="price-logo"><div class="price-amount" style="font-size:19px;margin-top:5px;color:var(--ev-muted)">Free</div><div class="price-note">Basic data collection only. No event tools.</div></div>
+          </div>
+          <div class="feat-layout">
+            <div class="feat-col-categories">
+              <div class="feat-col-header">Features</div>
+              <div class="feat-cat-list">
+                <button class="feat-cat-btn active" data-cat="all">Select All Categories</button>
+                <button class="feat-cat-btn" data-cat="forms">Forms</button>
+                <button class="feat-cat-btn" data-cat="event-creation">Event Creation</button>
+                <button class="feat-cat-btn" data-cat="artist-vendor">Artist and Vendor</button>
+                <button class="feat-cat-btn" data-cat="volunteer">Volunteer</button>
+                <button class="feat-cat-btn" data-cat="ticketing">Ticketing</button>
+                <button class="feat-cat-btn" data-cat="support">Support</button>
+              </div>
+            </div>
+            <div class="feat-col-ev">
+              <div class="feat-col-header ev-header"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="eventeny" style="height:20px;filter:brightness(0) invert(1);object-fit:contain;"><span class="rec-chip" style="margin-left:8px;">Recommended</span></div>
+              <div class="feat-rows-wrap collapsible" id="gformsEvRows">
+                <div class="feat-item" data-cat="forms"><div class="feat-ico yes">✓</div><span>Custom application questions</span></div>
+                <div class="feat-item" data-cat="forms"><div class="feat-ico yes">✓</div><span>Unlimited applications</span></div>
+                <div class="feat-item" data-cat="forms"><div class="feat-ico yes">✓</div><span>Application listing and payments</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico yes">✓</div><span>Unlimited events</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico yes">✓</div><span>Customized event mapping</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico yes">✓</div><span>Interactive scheduling</span></div>
+                <div class="feat-item" data-cat="artist-vendor"><div class="feat-ico yes">✓</div><span>Vendor and artist management</span></div>
+                <div class="feat-item" data-cat="artist-vendor"><div class="feat-ico yes">✓</div><span>Jury process built-in</span></div>
+                <div class="feat-item" data-cat="volunteer"><div class="feat-ico yes">✓</div><span>Volunteer management</span></div>
+                <div class="feat-item" data-cat="volunteer"><div class="feat-ico yes">✓</div><span>Custom shifts and departments</span></div>
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico yes">✓</div><span>Unlimited ticket types</span></div>
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico yes">✓</div><span>Payment collection built-in</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico yes">✓</div><span>Dedicated customer success manager</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico yes">✓</div><span>Phone and email support</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico yes">✓</div><span>In-house development team</span></div>
+              </div>
+              <button class="feat-show-more-btn" id="gformsEvShowMore" onclick="toggleFeatRows('gformsEvRows','gformsEvShowMore')">Show more</button>
+            </div>
+            <div class="feat-col-comp">
+              <div class="feat-col-header comp-header">GOOGLE FORMS</div>
+              <div class="feat-rows-wrap collapsible" id="gformsCompRows">
+                <div class="feat-item" data-cat="forms"><div class="feat-ico yes"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Custom application questions</span></div>
+                <div class="feat-item" data-cat="forms"><div class="feat-ico yes"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Unlimited applications</span></div>
+                <div class="feat-item" data-cat="forms"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Application listing and payments</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Unlimited events</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Customized event mapping</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Interactive scheduling</span></div>
+                <div class="feat-item" data-cat="artist-vendor"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Vendor and artist management</span></div>
+                <div class="feat-item" data-cat="artist-vendor"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Jury process built-in</span></div>
+                <div class="feat-item" data-cat="volunteer"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Volunteer management</span></div>
+                <div class="feat-item" data-cat="volunteer"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Custom shifts and departments</span></div>
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Unlimited ticket types</span></div>
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Payment collection built-in</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Dedicated customer success manager</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Phone and email support</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>In-house development team</span></div>
+              </div>
+              <button class="feat-show-more-btn comp-show-more" id="gformsCompShowMore" onclick="toggleFeatRows('gformsCompRows','gformsCompShowMore')">Show more</button>
+            </div>
+          </div>
+        </div>
+        <div class="quote-strip"><div class="q-mark">"</div><div><blockquote>Google Forms got us through year one. By year two we had 200 vendors, a volunteer team, and a ticketing operation. Eventeny was built for exactly that.</blockquote><cite>Amy S., Event Lead — Oakdale Community Arts Fair</cite></div></div>
+        </div>
+      </div>
+
+      <!-- REGFOX PANEL -->
+      <div class="comp-panel" id="panel-regfox">
+        <div class="table-card-wrap">
+        <div class="table-card">
+          <div class="pricing-row">
+            <div class="price-block ev"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="Eventeny" class="price-logo"><div class="price-amount">$240<span style="font-size:15px;font-weight:400;opacity:.7">/mo</span></div><div class="price-note">Full event management. Flat monthly.</div><div class="price-details"><span class="price-detail"><span class="dl">Setup:</span> Free</span><span class="price-detail"><span class="dl">Transaction:</span> 3%</span></div><a href="https://www.eventeny.com/product/pricing/" class="price-block-cta">Start Free</a></div>
+            <div class="price-block"><img src="/assets/logos/regfox.png" alt="RegFox" class="price-logo"><div class="price-amount" style="font-size:19px;margin-top:5px;color:var(--ev-muted)">$0.99/attendee</div><div class="price-note">Registration only. No vendor or map tools.</div><div class="price-details"><span class="price-detail"><span class="dl">Transaction:</span> 2.9% + $0.30</span></div></div>
+          </div>
+          <div class="feat-layout">
+            <div class="feat-col-categories">
+              <div class="feat-col-header">Features</div>
+              <div class="feat-cat-list">
+                <button class="feat-cat-btn active" data-cat="all">Select All Categories</button>
+                <button class="feat-cat-btn" data-cat="ticketing">Registration</button>
+                <button class="feat-cat-btn" data-cat="event-creation">Event Creation</button>
+                <button class="feat-cat-btn" data-cat="artist-vendor">Artist and Vendor</button>
+                <button class="feat-cat-btn" data-cat="volunteer">Volunteer</button>
+                <button class="feat-cat-btn" data-cat="support">Support</button>
+              </div>
+            </div>
+            <div class="feat-col-ev">
+              <div class="feat-col-header ev-header"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="eventeny" style="height:20px;filter:brightness(0) invert(1);object-fit:contain;"><span class="rec-chip" style="margin-left:8px;">Recommended</span></div>
+              <div class="feat-rows-wrap collapsible" id="regfoxEvRows">
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico yes">✓</div><span>Attendee registration</span></div>
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico yes">✓</div><span>Unlimited ticket types</span></div>
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico yes">✓</div><span>Donation and fundraising</span></div>
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico yes">✓</div><span>Touchless ticketing</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico yes">✓</div><span>Unlimited events</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico yes">✓</div><span>Customized event mapping</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico yes">✓</div><span>Interactive scheduling</span></div>
+                <div class="feat-item" data-cat="artist-vendor"><div class="feat-ico yes">✓</div><span>Vendor and artist management</span></div>
+                <div class="feat-item" data-cat="artist-vendor"><div class="feat-ico yes">✓</div><span>Unlimited applications</span></div>
+                <div class="feat-item" data-cat="volunteer"><div class="feat-ico yes">✓</div><span>Volunteer management</span></div>
+                <div class="feat-item" data-cat="volunteer"><div class="feat-ico yes">✓</div><span>Custom shifts and departments</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico yes">✓</div><span>Dedicated customer success manager</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico yes">✓</div><span>Phone and email support</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico yes">✓</div><span>In-house development team</span></div>
+              </div>
+              <button class="feat-show-more-btn" id="regfoxEvShowMore" onclick="toggleFeatRows('regfoxEvRows','regfoxEvShowMore')">Show more</button>
+            </div>
+            <div class="feat-col-comp">
+              <div class="feat-col-header comp-header">REGFOX</div>
+              <div class="feat-rows-wrap collapsible" id="regfoxCompRows">
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico yes"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Attendee registration</span></div>
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico yes"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Unlimited ticket types</span></div>
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico yes"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Donation and fundraising</span></div>
+                <div class="feat-item" data-cat="ticketing"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Touchless ticketing</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Unlimited events</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Customized event mapping</span></div>
+                <div class="feat-item" data-cat="event-creation"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Interactive scheduling</span></div>
+                <div class="feat-item" data-cat="artist-vendor"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Vendor and artist management</span></div>
+                <div class="feat-item" data-cat="artist-vendor"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Unlimited applications</span></div>
+                <div class="feat-item" data-cat="volunteer"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Volunteer management</span></div>
+                <div class="feat-item" data-cat="volunteer"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Custom shifts and departments</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Dedicated customer success manager</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>Phone and email support</span></div>
+                <div class="feat-item" data-cat="support"><div class="feat-ico no"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#e53e3e" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>In-house development team</span></div>
+              </div>
+              <button class="feat-show-more-btn comp-show-more" id="regfoxCompShowMore" onclick="toggleFeatRows('regfoxCompRows','regfoxCompShowMore')">Show more</button>
+            </div>
+          </div>
+        </div>
+        <div class="quote-strip"><div class="q-mark">"</div><div><blockquote>RegFox was easy for ticket sales. But we needed vendor applications, floor maps, and volunteer scheduling too. Eventeny handled all of it.</blockquote><cite>Kevin B., Operations Lead — Suncoast Community Festival</cite></div></div>
+        </div>
+      </div>
+  </div>
+</section>
+
+
+</section>
+
+
+<!-- IMAGE BAND -->
+<div class="img-band">
+  <div class="container">
+    <div class="img-band-inner">
+      <div class="img-band-text reveal">
+        <div class="eyebrow">Transitioning to a better way.</div>
+        <h2 class="section-title">Outfox the Chaos of Event Management</h2>
+        <p>Event management doesn't have to be overwhelming. With Eventeny's intelligent automation and intuitive design, you'll spend less time on logistics and more time creating unforgettable experiences.</p>
+        <a href="https://www.eventeny.com/why-eventeny/" class="btn-teal">See all features</a>
+      </div>
+      <div class="img-band-visual reveal">
+        <img src="assets/fox.png" alt="Eventeny all-in-one platform" id="bandImg"/>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<section class="bg-soft">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:52px;" class="reveal">
+      <div class="eyebrow" style="justify-content:center;">Common questions</div>
+      <h2 class="section-title">Everything you need to know</h2>
+    </div>
+    <div class="faq-wrap">
+      <div class="faq-item open reveal"><div class="faq-q">Do I need multiple tools to run my event? <span class="faq-icon">+</span></div><div class="faq-a">Most platforms focus on one thing — ticketing, or applications, or mapping. Eventeny puts all of it in one place. You get vendor management, volunteer tools, ticketing, sponsor management, and event mapping under a single login with no third-party stitching required.</div></div>
+      <div class="faq-item reveal"><div class="faq-q">How hard is it to migrate from another platform? <span class="faq-icon">+</span></div><div class="faq-a">Your onboarding manager walks you through data migration and setup. Most organizers are live within a week. The knowledge base and community center cover every step, and phone support is available when you need a human.</div></div>
+      <div class="faq-item reveal"><div class="faq-q">Are there hidden fees I should know about? <span class="faq-icon">+</span></div><div class="faq-a">No. The platform fee is $240 per month. Transaction fees are 3%. Setup is free. Features like vendor management, volunteer tools, and event mapping are all included.</div></div>
+      <div class="faq-item reveal"><div class="faq-q">What types of events does Eventeny support? <span class="faq-icon">+</span></div><div class="faq-a">Art festivals, food and drink events, community fairs, fandom conventions, music festivals, markets, pride events, and heritage festivals. If your event has vendors, volunteers, or sponsors, Eventeny was built for it.</div></div>
+      <div class="faq-item reveal"><div class="faq-q">What support is included? <span class="faq-icon">+</span></div><div class="faq-a">Every plan includes a dedicated onboarding manager, phone support, email support, access to the knowledge base, and community center resources. Large-scale events get a dedicated account manager at no extra cost.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-section">
+  <div class="container" style="position:relative;z-index:1;">
+    <h2 class="reveal">Ready to run a <span>better event?</span></h2>
+    <p class="reveal">Join thousands of event organizers who trust Eventeny</p>
+    <div class="cta-btns reveal">
+      <a href="#" class="btn-cta">Start Your Free Trial</a>
+      <a href="#" class="btn-cta-ghost">Book a Demo</a>
+    </div>
+    <div class="cta-fine reveal">No credit card &nbsp;·&nbsp; Free setup &nbsp;·&nbsp; Cancel anytime</div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-inner">
+    <div class="foot-logo">Eventeny</div>
+    <div class="foot-links">
+      <a href="#">Product</a><a href="#">Pricing</a><a href="#">Compare</a>
+      <a href="#">Resources</a><a href="#">Privacy</a><a href="#">Terms</a>
+    </div>
+    <div class="foot-copy">© 2026 Eventeny</div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
