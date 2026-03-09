@@ -213,37 +213,37 @@ function toggleFeatRows(evRowsId, compRowsId, btnId) {
     eventbrite: {
       text: '<strong>Eventbrite</strong> focuses on ticketing and event promotion. <strong>Eventeny</strong> manages the full event includig vendors, maps, volunteers, sponsors, and ticketing in one place.',
       badge: 'Eventeny wins 9 of 11 features',
-      href: 'https://www.eventeny.com/compare/eventeny-vs-eventbrite/',
+      href: 'https://www.eventeny.com/eventeny-vs-eventbrite/',
       label: 'View Comparison'
     },
     cvent: {
       text: '<strong>Cvent</strong> is built for enterprise conferences and corporate teams. <strong>Eventeny</strong> is built for festivals, conventions, and live event operations.',
       badge: 'Eventeny wins 6 of 6 features',
-      href: 'https://www.eventeny.com/compare/eventeny-vs-cvent/',
+      href: 'https://www.eventeny.com/eventeny-vs-cvent/',
       label: 'View Comparison'
     },
     leap: {
       text: '<strong>Leap Conventions</strong> handles badge sales and fan event coordination. <strong>Eventeny</strong> adds vendor management, interactive mapping, sponsors, and volunteers on top.',
       badge: 'Eventeny wins 5 of 6 features',
-      href: 'https://www.eventeny.com/compare/eventeny-vs-leap-conventions/',
+      href: 'https://www.eventeny.com/eventeny-vs-leap-conventions/',
       label: 'View Comparison'
     },
     zapplication: {
       text: '<strong>Zapplication</strong> centers on jury-based artist applications. <strong>Eventeny</strong> covers applications, mapping, volunteers, sponsors, and more — no extra tools required.',
       badge: 'Eventeny wins 6 of 6 features',
-      href: 'https://www.eventeny.com/compare/eventeny-vs-zapplication/',
+      href: 'https://www.eventeny.com/eventeny-vs-zapplication/',
       label: 'View Comparison'
     },
     boothcentral: {
       text: '<strong>BoothCentral</strong> specializes in booth applications and floor plans. <strong>Eventeny</strong> brings ticketing, volunteers, sponsor management, and full event logistics alongside that.',
       badge: 'Eventeny wins 5 of 6 features',
-      href: 'https://www.eventeny.com/compare/eventeny-vs-boothcentral/',
+      href: 'https://www.eventeny.com/eventeny-vs-boothcentral/',
       label: 'View Comparison'
     },
     ticketspice: {
       text: '<strong>TicketSpice</strong> specializes in customizable ticket sales. <strong>Eventeny</strong> includes ticketing plus the full event stack — vendors, mapping, volunteers, and sponsors.',
       badge: 'Eventeny wins 4 of 6 features',
-      href: 'https://www.eventeny.com/compare/eventeny-vs-ticketspice/',
+      href: 'https://www.eventeny.com/eventeny-vs-ticketspice/',
       label: 'View Comparison'
     },
     tixr: {
@@ -340,12 +340,18 @@ function toggleFeatRows(evRowsId, compRowsId, btnId) {
 
     /* Card click — guard against swipe triggering activation */
   var _swipeStartX = 0;
+  var _swipeStartY = 0;
   $(document).on('pointerdown touchstart', '.hub-card', function (e) {
-    _swipeStartX = e.touches ? e.touches[0].clientX : e.clientX;
+    var pt = e.touches ? e.touches[0] : e;
+    _swipeStartX = pt.clientX;
+    _swipeStartY = pt.clientY;
   });
-  $(document).on('click', '.hub-card', function (e) {
-    var endX = e.clientX;
-    if (Math.abs(endX - _swipeStartX) > 10) return; // was a swipe, not a tap
+  $(document).on('click touchend', '.hub-card', function (e) {
+    var pt = e.changedTouches ? e.changedTouches[0] : e;
+    var endX = pt.clientX || 0;
+    var endY = pt.clientY || 0;
+    if (Math.abs(endX - _swipeStartX) > 10 || Math.abs(endY - _swipeStartY) > 10) return;
+    if (e.type === 'touchend') e.preventDefault(); // stop ghost click
     activateCompetitor($(this).data('comp'));
   });
 
@@ -467,10 +473,13 @@ function toggleFeatRows(evRowsId, compRowsId, btnId) {
       var el = this;
       var isScrollable = el.scrollHeight > el.clientHeight + 2;
       var $btn = $panel.find('.feat-show-more-btn');
+      var $wrap = $panel.find('.feat-show-more-wrap');
       if (isScrollable) {
+        $wrap.show();
         $btn.show().text('Show more');
       } else {
         $btn.hide();
+        $wrap.hide();
       }
     });
   }
