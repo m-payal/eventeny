@@ -8,7 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,600;1,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
-<body class="compare-page">
+<body>
 
 <nav id="mainNav">
   <div class="nav-inner">
@@ -140,7 +140,7 @@
         <form id="demoForm" novalidate autocomplete="on">
 
           <div class="modal-field">
-            <label for="demoRole">Your role <span class="req">*</span></label>
+            <label for="demoRole">I'm an event... <span class="req">*</span></label>
             <select id="demoRole" name="role" required autocomplete="organization-title">
               <option value="" disabled selected>Select your role</option>
               <option value="organizer">Event Organizer</option>
@@ -417,6 +417,17 @@
       <span class="hub-vs-ev">Eventeny</span> Vs Eventbrite
     </div>
 
+    <!-- Context strip -->
+    <div class="hub-strip" id="hubStrip">
+      <div class="hub-strip-inner">
+        <div class="hub-strip-text" id="hubStripText"></div>
+        <div class="hub-strip-actions">
+          <div class="hub-strip-badge" id="hubStripBadge">Eventeny wins 9 of 11 features</div>
+          <a href="#" class="hub-strip-link" id="hubStripLink">View Comparison</a>
+        </div>
+      </div>
+    </div>
+
     <!-- Dynamic table -->
     <div class="hub-table-area" id="hubTableArea">
       <!-- Panels injected here -->
@@ -440,7 +451,7 @@
             <div class="feat-col-categories">
               <div class="feat-col-header">Features</div>
               <div class="feat-cat-list" id="ebCatList">
-                <button class="feat-cat-btn active" data-cat="event-creation">Event Creation</button>
+                <button class="feat-cat-btn active" data-cat="event-creation">Event Creation Essentials</button>
                 <button class="feat-cat-btn" data-cat="artist-vendor">Artist and vendor management</button>
                 <button class="feat-cat-btn" data-cat="volunteer">Volunteer Recruitment</button>
                 <button class="feat-cat-btn" data-cat="ticketing">Ticketing and Entry</button>
@@ -453,7 +464,7 @@
             <div class="feat-col-ev">
               <div class="feat-col-header ev-header">
                 <img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="eventeny" style="height:20px;filter:brightness(0) invert(1);object-fit:contain;">
-                
+                <span class="rec-chip" style="margin-left:8px;">Recommended</span>
               </div>
               <div class="feat-rows-wrap collapsible" id="ebEvRows">
                 <!-- Event Creation -->
@@ -540,7 +551,7 @@
               </div>
             </div>
             <div class="feat-col-ev">
-              <div class="feat-col-header ev-header"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="eventeny" style="height:20px;filter:brightness(0) invert(1);object-fit:contain;"></div>
+              <div class="feat-col-header ev-header"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="eventeny" style="height:20px;filter:brightness(0) invert(1);object-fit:contain;"><span class="rec-chip" style="margin-left:8px;">Recommended</span></div>
               <div class="feat-rows-wrap collapsible" id="cventEvRows">
                 <div class="feat-item" data-cat="pricing"><div class="feat-ico yes">✓</div><span>Publicly listed pricing</span></div>
                 <div class="feat-item" data-cat="pricing"><div class="feat-ico yes">✓</div><span>No setup fees</span></div>
@@ -611,7 +622,7 @@
               </div>
             </div>
             <div class="feat-col-ev">
-              <div class="feat-col-header ev-header"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="eventeny" style="height:20px;filter:brightness(0) invert(1);object-fit:contain;"></div>
+              <div class="feat-col-header ev-header"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="eventeny" style="height:20px;filter:brightness(0) invert(1);object-fit:contain;"><span class="rec-chip" style="margin-left:8px;">Recommended</span></div>
               <div class="feat-rows-wrap collapsible" id="leapEvRows">
                 <div class="feat-item" data-cat="event-creation"><div class="feat-ico yes">✓</div><span>Unlimited events</span></div>
                 <div class="feat-item" data-cat="event-creation"><div class="feat-ico yes">✓</div><span>In-person, hybrid and virtual</span></div>
@@ -680,7 +691,7 @@
               </div>
             </div>
             <div class="feat-col-ev">
-              <div class="feat-col-header ev-header"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="eventeny" style="height:20px;filter:brightness(0) invert(1);object-fit:contain;"></div>
+              <div class="feat-col-header ev-header"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="eventeny" style="height:20px;filter:brightness(0) invert(1);object-fit:contain;"><span class="rec-chip" style="margin-left:8px;">Recommended</span></div>
               <div class="feat-rows-wrap collapsible" id="zappEvRows">
                 <div class="feat-item" data-cat="applications"><div class="feat-ico yes">✓</div><span>Unlimited applications</span></div>
                 <div class="feat-item" data-cat="applications"><div class="feat-ico yes">✓</div><span>Custom application questions</span></div>
@@ -750,7 +761,7 @@
               </div>
             </div>
             <div class="feat-col-ev">
-              <div class="feat-col-header ev-header"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="eventeny" style="height:20px;filter:brightness(0) invert(1);object-fit:contain;"></div>
+              <div class="feat-col-header ev-header"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="eventeny" style="height:20px;filter:brightness(0) invert(1);object-fit:contain;"><span class="rec-chip" style="margin-left:8px;">Recommended</span></div>
               <div class="feat-rows-wrap collapsible" id="boothEvRows">
                 <div class="feat-item" data-cat="booth"><div class="feat-ico yes">✓</div><span>Occupied booth tracking</span></div>
                 <div class="feat-item" data-cat="booth"><div class="feat-ico yes">✓</div><span>Interactive floor map</span></div>
@@ -818,7 +829,7 @@
               </div>
             </div>
             <div class="feat-col-ev">
-              <div class="feat-col-header ev-header"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="eventeny" style="height:20px;filter:brightness(0) invert(1);object-fit:contain;"></div>
+              <div class="feat-col-header ev-header"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="eventeny" style="height:20px;filter:brightness(0) invert(1);object-fit:contain;"><span class="rec-chip" style="margin-left:8px;">Recommended</span></div>
               <div class="feat-rows-wrap collapsible" id="tsEvRows">
                 <div class="feat-item" data-cat="ticketing"><div class="feat-ico yes">✓</div><span>Unlimited ticket types</span></div>
                 <div class="feat-item" data-cat="ticketing"><div class="feat-ico yes">✓</div><span>Touchless ticketing</span></div>
@@ -884,7 +895,7 @@
               </div>
             </div>
             <div class="feat-col-ev">
-              <div class="feat-col-header ev-header"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="eventeny" style="height:20px;filter:brightness(0) invert(1);object-fit:contain;"></div>
+              <div class="feat-col-header ev-header"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="eventeny" style="height:20px;filter:brightness(0) invert(1);object-fit:contain;"><span class="rec-chip" style="margin-left:8px;">Recommended</span></div>
               <div class="feat-rows-wrap collapsible" id="tixrEvRows">
                 <div class="feat-item" data-cat="ticketing"><div class="feat-ico yes">✓</div><span>Unlimited ticket types</span></div>
                 <div class="feat-item" data-cat="ticketing"><div class="feat-ico yes">✓</div><span>Touchless ticketing</span></div>
@@ -951,7 +962,7 @@
               </div>
             </div>
             <div class="feat-col-ev">
-              <div class="feat-col-header ev-header"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="eventeny" style="height:20px;filter:brightness(0) invert(1);object-fit:contain;"></div>
+              <div class="feat-col-header ev-header"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="eventeny" style="height:20px;filter:brightness(0) invert(1);object-fit:contain;"><span class="rec-chip" style="margin-left:8px;">Recommended</span></div>
               <div class="feat-rows-wrap collapsible" id="oneplanEvRows">
                 <div class="feat-item" data-cat="mapping"><div class="feat-ico yes">✓</div><span>Customized event mapping</span></div>
                 <div class="feat-item" data-cat="mapping"><div class="feat-ico yes">✓</div><span>Interactive floor plans</span></div>
@@ -1021,7 +1032,7 @@
               </div>
             </div>
             <div class="feat-col-ev">
-              <div class="feat-col-header ev-header"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="eventeny" style="height:20px;filter:brightness(0) invert(1);object-fit:contain;"></div>
+              <div class="feat-col-header ev-header"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="eventeny" style="height:20px;filter:brightness(0) invert(1);object-fit:contain;"><span class="rec-chip" style="margin-left:8px;">Recommended</span></div>
               <div class="feat-rows-wrap collapsible" id="expofpEvRows">
                 <div class="feat-item" data-cat="mapping"><div class="feat-ico yes">✓</div><span>Interactive floor plans</span></div>
                 <div class="feat-item" data-cat="mapping"><div class="feat-ico yes">✓</div><span>Customized event mapping</span></div>
@@ -1090,7 +1101,7 @@
               </div>
             </div>
             <div class="feat-col-ev">
-              <div class="feat-col-header ev-header"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="eventeny" style="height:20px;filter:brightness(0) invert(1);object-fit:contain;"></div>
+              <div class="feat-col-header ev-header"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="eventeny" style="height:20px;filter:brightness(0) invert(1);object-fit:contain;"><span class="rec-chip" style="margin-left:8px;">Recommended</span></div>
               <div class="feat-rows-wrap collapsible" id="mmmEvRows">
                 <div class="feat-item" data-cat="applications"><div class="feat-ico yes">✓</div><span>Unlimited vendor applications</span></div>
                 <div class="feat-item" data-cat="applications"><div class="feat-ico yes">✓</div><span>Custom application questions</span></div>
@@ -1158,7 +1169,7 @@
               </div>
             </div>
             <div class="feat-col-ev">
-              <div class="feat-col-header ev-header"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="eventeny" style="height:20px;filter:brightness(0) invert(1);object-fit:contain;"></div>
+              <div class="feat-col-header ev-header"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="eventeny" style="height:20px;filter:brightness(0) invert(1);object-fit:contain;"><span class="rec-chip" style="margin-left:8px;">Recommended</span></div>
               <div class="feat-rows-wrap collapsible" id="jotformEvRows">
                 <div class="feat-item" data-cat="forms"><div class="feat-ico yes">✓</div><span>Custom application questions</span></div>
                 <div class="feat-item" data-cat="forms"><div class="feat-ico yes">✓</div><span>Unlimited applications</span></div>
@@ -1228,7 +1239,7 @@
               </div>
             </div>
             <div class="feat-col-ev">
-              <div class="feat-col-header ev-header"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="eventeny" style="height:20px;filter:brightness(0) invert(1);object-fit:contain;"></div>
+              <div class="feat-col-header ev-header"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="eventeny" style="height:20px;filter:brightness(0) invert(1);object-fit:contain;"><span class="rec-chip" style="margin-left:8px;">Recommended</span></div>
               <div class="feat-rows-wrap collapsible" id="gformsEvRows">
                 <div class="feat-item" data-cat="forms"><div class="feat-ico yes">✓</div><span>Custom application questions</span></div>
                 <div class="feat-item" data-cat="forms"><div class="feat-ico yes">✓</div><span>Unlimited applications</span></div>
@@ -1297,7 +1308,7 @@
               </div>
             </div>
             <div class="feat-col-ev">
-              <div class="feat-col-header ev-header"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="eventeny" style="height:20px;filter:brightness(0) invert(1);object-fit:contain;"></div>
+              <div class="feat-col-header ev-header"><img src="https://help.eventeny.com/hc/theming_assets/01HZPD7VBZR77CKQSRXEY8513H" alt="eventeny" style="height:20px;filter:brightness(0) invert(1);object-fit:contain;"><span class="rec-chip" style="margin-left:8px;">Recommended</span></div>
               <div class="feat-rows-wrap collapsible" id="regfoxEvRows">
                 <div class="feat-item" data-cat="ticketing"><div class="feat-ico yes">✓</div><span>Attendee registration</span></div>
                 <div class="feat-item" data-cat="ticketing"><div class="feat-ico yes">✓</div><span>Unlimited ticket types</span></div>
@@ -1346,7 +1357,6 @@
     </div><!-- /hub-table-area -->
   </div>
 </section>
-
 
 
 <!-- IMAGE BAND -->

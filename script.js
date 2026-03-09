@@ -101,10 +101,8 @@ function toggleFeatRows(evRowsId, compRowsId, btnId) {
     form.innerHTML = '<div style="text-align:center;padding:40px 0;">'
       + '<div style="font-size:40px;margin-bottom:16px;">🎉</div>'
       + '<p style="font-family:Poppins,sans-serif;font-size:18px;font-weight:600;color:#0a2a28;margin:0 0 8px;">Request received!</p>'
-      + '<p style="font-size:14px;color:#5a7a76;margin:0 0 24px;">Our team will reach out within one business day.</p>'
-      + '<button type="button" id="demoSuccessClose" style="background:#00c4a7;color:#fff;border:none;border-radius:8px;padding:10px 28px;font-family:Poppins,sans-serif;font-size:14px;font-weight:600;cursor:pointer;">Close</button>'
+      + '<p style="font-size:14px;color:#5a7a76;">Our team will reach out within one business day.</p>'
       + '</div>';
-    document.getElementById('demoSuccessClose').addEventListener('click', closeModal);
   });
 }());
 
@@ -198,19 +196,9 @@ function toggleFeatRows(evRowsId, compRowsId, btnId) {
     }, { threshold: 0.1, rootMargin: '0px 0px -20px 0px' });
 
     $('[data-count]').each(function () {
-      // H1 fix: pre-populate with final value so users who miss the animation see real data
-      var $el = $(this);
-      var raw = parseInt($el.data('count'));
-      var suffix = $el.data('suffix') || '';
-      var isDecimal = $el.data('decimal');
-      var finalText = isDecimal ? (raw / 10).toFixed(1) + suffix : raw.toLocaleString() + suffix;
-      $el.attr('data-final', finalText);
-      // Set the fallback value immediately; animation will overwrite if observed
-      $el.text(finalText);
-
       var rect = this.getBoundingClientRect();
       if (rect.top < window.innerHeight && rect.bottom > 0) {
-        animateCounter($el); // already visible on load
+        animateCounter($(this)); // already visible on load
       } else {
         counterObserver.observe(this);
       }
@@ -347,12 +335,7 @@ function toggleFeatRows(evRowsId, compRowsId, btnId) {
   $(document).on('click', '.hub-card', function (e) {
     var endX = e.clientX;
     if (Math.abs(endX - _swipeStartX) > 10) return; // was a swipe, not a tap
-    var comp = $(this).data('comp');
-    activateCompetitor(comp);
-    // H7 fix: write competitor to URL param so the panel can be deep-linked
-    var url = new URL(window.location.href);
-    url.searchParams.set('vs', comp);
-    history.replaceState(null, '', url.toString());
+    activateCompetitor($(this).data('comp'));
   });
 
   /* ── Rail — 4 cards per page ─────────────── */
@@ -468,10 +451,8 @@ function toggleFeatRows(evRowsId, compRowsId, btnId) {
     }
   });
 
-  /* Boot with first card active — or restore from ?vs= URL param */
-  var urlComp = new URLSearchParams(window.location.search).get('vs');
-  var bootComp = (urlComp && STRIP_DATA[urlComp]) ? urlComp : 'eventbrite';
-  activateCompetitor(bootComp);
+  /* Boot with first card active */
+  activateCompetitor('eventbrite');
 
 })();
   /* ────────────────────────────────────────────
