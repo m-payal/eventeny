@@ -62,21 +62,65 @@ function toggleFeatRows(evRowsId, compRowsId, btnId) {
     el.addEventListener('click', function (e) { e.preventDefault(); openModal(); });
   });
 
+  
+
   // Form validation
   var requiredFields = [
-    { id: 'demoRole',  errId: 'demoRoleError' },
-    { id: 'demoName',  errId: 'demoNameError' },
-    { id: 'demoEmail', errId: 'demoEmailError' },
-    { id: 'demoPhone', errId: 'demoPhoneError' },
-    { id: 'demoUrl',   errId: 'demoUrlError' },
+    {
+      id: 'demoRole',
+      errId: 'demoRoleError',
+      errMsg: 'Please complete this required field.',
+      validate: function (val) { return val !== ''; }
+    },
+    {
+      id: 'demoName',
+      errId: 'demoNameError',
+      errMsg: 'Please enter your full name (first and last).',
+      validate: function (val) {
+        return val.trim().split(/\s+/).length >= 2 && val.trim().length >= 4;
+      }
+    },
+    {
+      id: 'demoEmail',
+      errId: 'demoEmailError',
+      errMsg: 'Enter a valid email address.',
+      validate: function (val) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val.trim());
+      }
+    },
+    {
+      id: 'demoPhone',
+      errId: 'demoPhoneError',
+      errMsg: 'Enter a valid phone number (at least 7 digits).',
+      validate: function (val) {
+        return /^\+?[\d\s\-().]{7,}$/.test(val.trim());
+      }
+    },
+    {
+      id: 'demoUrl',
+      errId: 'demoUrlError',
+      errMsg: 'Enter a valid URL (include https://).',
+      validate: function (val) {
+        return /^https?:\/\/.+\..+/.test(val.trim());
+      }
+    }
   ];
 
   function validateField(fieldId, errId) {
-    var el  = document.getElementById(fieldId);
-    var err = document.getElementById(errId);
-    var ok  = el.value.trim() !== '';
+    var field = requiredFields.find(function (f) { return f.id === fieldId; });
+    var el    = document.getElementById(fieldId);
+    var err   = document.getElementById(errId);
+    var val   = el.value.trim();
+    var ok    = field ? field.validate(val) : val !== '';
+  
     el.classList.toggle('invalid', !ok);
+    el.classList.toggle('valid', ok && val !== '');
     err.classList.toggle('visible', !ok);
+  
+    if (!ok && field && field.errMsg) {
+      err.textContent = field.errMsg;
+    }
+  
     return ok;
   }
 
@@ -97,7 +141,7 @@ function toggleFeatRows(evRowsId, compRowsId, btnId) {
       return validateField(f.id, f.errId);
     });
     if (!allValid) return;
-    // Success — replace form with confirmation
+    // Success
     form.innerHTML = '<div style="text-align:center;padding:40px 0;">'
       + '<div style="font-size:40px;margin-bottom:16px;">🎉</div>'
       + '<p style="font-family:Poppins,sans-serif;font-size:18px;font-weight:600;color:#0a2a28;margin:0 0 8px;">Request received!</p>'
@@ -141,6 +185,34 @@ function toggleFeatRows(evRowsId, compRowsId, btnId) {
   
     $(document).on('keydown', function (e) {
       if (e.key === 'Escape') closeAllDropdowns();
+    });
+
+    /* ────────────────────────────────────────────
+       MOBILE HAMBURGER DRAWER
+    ─────────────────────────────────────────────── */
+    var $hamburger = $('#navHamburger');
+    var $drawer    = $('#mobileDrawer');
+    var $mOverlay  = $('#mobileOverlay');
+
+    function openMobileNav() {
+      $hamburger.addClass('open').attr('aria-expanded', 'true');
+      $drawer.addClass('open').attr('aria-hidden', 'false');
+      $mOverlay.addClass('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeMobileNav() {
+      $hamburger.removeClass('open').attr('aria-expanded', 'false');
+      $drawer.removeClass('open').attr('aria-hidden', 'true');
+      $mOverlay.removeClass('open');
+      document.body.style.overflow = '';
+    }
+
+    $hamburger.on('click', function () {
+      $drawer.hasClass('open') ? closeMobileNav() : openMobileNav();
+    });
+    $mOverlay.on('click', closeMobileNav);
+    $(document).on('keydown', function (e) {
+      if (e.key === 'Escape' && $drawer.hasClass('open')) closeMobileNav();
     });
   
     /* ────────────────────────────────────────────

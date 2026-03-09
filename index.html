@@ -110,8 +110,26 @@
         <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </button>
     </div>
+    <!-- Hamburger — only visible on mobile via CSS -->
+    <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </div>
 </nav>
+
+<!-- Mobile drawer — hidden by default, opened by hamburger -->
+<div class="mobile-nav-drawer" id="mobileDrawer" aria-hidden="true">
+  <div class="mobile-nav-inner">
+    <a href="#" class="mobile-nav-link">Organize</a>
+    <a href="#" class="mobile-nav-link">Participate</a>
+    <a href="https://www.eventeny.com/product/pricing/" class="mobile-nav-link">Pricing</a>
+    <a href="https://www.eventeny.com/login/" class="mobile-nav-link">Sign in</a>
+    <a href="https://www.eventeny.com/dashboard/events/?create" class="mobile-nav-cta">Create an Event</a>
+  </div>
+</div>
+<div class="mobile-nav-overlay" id="mobileOverlay"></div>
 <!-- Sticky demo button -->
 <button id="openModal" aria-label="Request a demo">Schedule a demo</button>
 
