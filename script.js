@@ -311,6 +311,17 @@ function toggleFeatRows(evRowsId, compRowsId, btnId) {
     $('.comp-panel').removeClass('active');
     $('#panel-' + comp).addClass('active');
 
+    var $newPanel = $('#panel-' + comp);
+    var $firstBtn = $newPanel.find('.feat-cat-btn').first();
+    $newPanel.find('.feat-cat-btn').removeClass('active');
+    $firstBtn.addClass('active');
+    var firstCat = $firstBtn.data('cat');
+    $newPanel.find('.feat-item').each(function () {
+      $(this).toggleClass('hidden', $(this).data('cat') !== firstCat);
+    });
+    $newPanel.find('.feat-rows-wrap').removeClass('expanded').addClass('collapsible');
+    updateShowMoreBtn($newPanel);
+
     /* 5. On mobile, nudge scroll to strip */
     if ($(window).width() < 768) {
       var stripTop = $('#hubStrip').offset().top - 80;
@@ -451,12 +462,25 @@ function toggleFeatRows(evRowsId, compRowsId, btnId) {
     }
   });
 
+  function updateShowMoreBtn($panel) {
+    $panel.find('.feat-rows-wrap').each(function () {
+      var el = this;
+      var isScrollable = el.scrollHeight > el.clientHeight + 2;
+      var $btn = $panel.find('.feat-show-more-btn');
+      if (isScrollable) {
+        $btn.show().text('Show more');
+      } else {
+        $btn.hide();
+      }
+    });
+  }
+
   /* Boot with first card active */
   activateCompetitor('eventbrite');
 
 })();
   /* ────────────────────────────────────────────
-     FEATURE CATEGORY FILTER (Eventbrite panel)
+     FEATURE CATEGORY FILTER
   ─────────────────────────────────────────────── */
   $(document).on('click', '.feat-cat-btn', function () {
     var $btn = $(this);
@@ -464,20 +488,16 @@ function toggleFeatRows(evRowsId, compRowsId, btnId) {
     $btn.closest('.feat-col-categories').find('.feat-cat-btn').removeClass('active');
     $btn.addClass('active');
     var $panel = $btn.closest('.comp-panel');
-
+  
     if (cat === 'all') {
       $panel.find('.feat-item').removeClass('hidden');
-      // Restore collapsed state and show the buttons
-      $panel.find('.feat-rows-wrap').removeClass('expanded').addClass('collapsible');
-      $panel.find('.feat-show-more-btn').show().text('Show more');
     } else {
       $panel.find('.feat-item').each(function () {
         $(this).toggleClass('hidden', $(this).data('cat') !== cat);
       });
-      // Expand fully and hide buttons for specific categories
-      $panel.find('.feat-rows-wrap').addClass('expanded').removeClass('collapsible');
-      $panel.find('.feat-show-more-btn').hide();
     }
+    $panel.find('.feat-rows-wrap').removeClass('expanded').addClass('collapsible');
+    updateShowMoreBtn($panel);
   });
 
 })();

@@ -725,14 +725,15 @@
      flex-direction: column;
    }
    .feat-rows-wrap {
-     flex: 1;
-     overflow: hidden;
-     max-height: 9999px;
-     transition: max-height 0.4s ease;
-     position: relative;
+    flex: 1;
+    overflow-y: auto;
+    max-height: 9999px;
+    transition: max-height 0.4s ease;
+    position: relative;
    }
    .feat-rows-wrap.collapsible {
      max-height: 340px;
+     overflow-y: auto
    }
    .feat-rows-wrap.expanded {
      max-height: 9999px;
@@ -745,12 +746,7 @@
      height: 50px;
      pointer-events: none;
    }
-   .feat-col-ev .feat-rows-wrap.collapsible:not(.expanded)::after {
-     background: linear-gradient(to bottom, transparent, #076460);
-   }
-   .feat-col-comp .feat-rows-wrap.collapsible:not(.expanded)::after {
-     background: linear-gradient(to bottom, transparent, #f8fdfc);
-   }
+   
    .feat-item {
      display: flex;
      align-items: center;
