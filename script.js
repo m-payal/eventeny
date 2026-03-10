@@ -297,13 +297,13 @@ function toggleFeatRows(evRowsId, compRowsId, btnId) {
 
   var STRIP_DATA = {
     eventbrite: {
-      text: '<strong>Eventbrite</strong> focuses on ticketing and event promotion. <strong>Eventeny</strong> manages the full event includig vendors, maps, volunteers, sponsors, and ticketing in one place.',
+      text: '<strong>Eventbrite</strong> only focuses on ticketing and event promotion. <strong>Eventeny</strong> manages the full event including vendors, maps, volunteers, sponsors, and ticketing in one place.',
       badge: 'Eventeny wins 9 of 11 features',
       href: 'https://www.eventeny.com/eventeny-vs-eventbrite/',
       label: 'View Comparison'
     },
     cvent: {
-      text: '<strong>Cvent</strong> is built for enterprise conferences and corporate teams. <strong>Eventeny</strong> is built for festivals, conventions, and live event operations.',
+      text: '<strong>Cvent</strong> is only built for enterprise conferences and corporate teams. <strong>Eventeny</strong> is built for festivals, conventions, and live event operations.',
       badge: 'Eventeny wins 6 of 6 features',
       href: 'https://www.eventeny.com/eventeny-vs-cvent/',
       label: 'View Comparison'
@@ -333,13 +333,13 @@ function toggleFeatRows(evRowsId, compRowsId, btnId) {
       label: 'View Comparison'
     },
     tixr: {
-      text: '<strong>Tixr</strong> focuses on premium branded ticketing for live entertainment. <strong>Eventeny</strong> fits festivals, conventions, and markets where you need more than a ticket scanner.',
+      text: '<strong>Tixr</strong> focuses on premium branded ticketing for live entertainment only. <strong>Eventeny</strong> fits festivals, conventions, and markets where you need more than a ticket scanner.',
       badge: 'Eventeny wins 4 of 6 features',
       href: 'https://www.eventeny.com/compare/eventeny-vs-tixr/',
       label: 'View Comparison'
     },
     oneplan: {
-      text: '<strong>OnePlan</strong> excels at event site design and safety mapping. <strong>Eventeny</strong> adds vendor management, ticketing, volunteers, and scheduling alongside interactive floor plans.',
+      text: '<strong>OnePlan</strong> focuses only on event site design and safety mapping. <strong>Eventeny</strong> adds vendor management, ticketing, volunteers, and scheduling alongside interactive floor plans.',
       badge: 'Eventeny wins 5 of 6 features',
       href: 'https://www.eventeny.com/eventeny-vs-oneplan/',
       label: 'View Comparison'
