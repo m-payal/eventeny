@@ -211,7 +211,7 @@
    .img-band-inner { display: grid; grid-template-columns: 1fr; gap: 36px; align-items: center; }
    .img-band-text p { font-size: 15px; color: var(--ev-navy); line-height: 1.8; font-weight: 400; margin-bottom: 14px; }
    .img-band-text p:last-of-type { margin-bottom: 28px; }
-   .img-band-visual img { width: 100%; display: block; }
+   .img-band-visual img { width: 80%; max-width: 360px; display: block; margin: 0 auto; }
    
    /* ================================================================
       FEATURE TABLE — mobile base
