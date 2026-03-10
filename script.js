@@ -227,7 +227,21 @@ function toggleFeatRows(evRowsId, compRowsId, btnId) {
       });
     }, { threshold: 0.1 });
   
-    $('.reveal').each(function () { revealObserver.observe(this); });
+    $('.reveal').each(function () {
+      if (this.id === 'compare') return; // handled separately
+      revealObserver.observe(this);
+    });
+
+    /* compare section — only reveal after user scrolls past hero */
+    var compareObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          $(entry.target).addClass('visible');
+          compareObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.05, rootMargin: '0px 0px -60px 0px' });
+    compareObserver.observe(document.getElementById('compare'));
   
     /* ────────────────────────────────────────────
        FAQ ACCORDION
@@ -377,7 +391,7 @@ function toggleFeatRows(evRowsId, compRowsId, btnId) {
     /* 3. Update summary strip */
     $('#hubStripText').html(data.text);
     $('#hubStripBadge').text(data.badge);
-    $('#hubStripLink').attr('href', data.href).text(data.label);
+    $('#hubStripLink').attr('href', data.href).attr('target', '_blank').attr('rel', 'noopener noreferrer').text(data.label);
 
     /* 4. Update table panel */
     $('.comp-panel').removeClass('active');
@@ -401,14 +415,7 @@ function toggleFeatRows(evRowsId, compRowsId, btnId) {
     }
   }
 
-    /* Strip link — scroll to compare section without writing hash */
-    $(document).on('click', '#hubStripLink', function (e) {
-      e.preventDefault();
-      var target = $('#compare');
-      if (target.length) {
-        $('html, body').animate({ scrollTop: target.offset().top - 80 }, 320);
-      }
-    });
+    /* Strip link — opens competitor comparison page in new tab */
 
     /* Card click — guard against swipe triggering activation */
   var _swipeStartX = 0;
